@@ -8,14 +8,12 @@ document.getElementById("btnForLogin").addEventListener('click', function(){
     let login =  document.getElementById("login").value;
     let pass = document.getElementById("password").value;
     for (var [key, value] of responseObj) {
-        console.log(responseObj.get(key));
         if (responseObj.get(key).name == login) {
             if (responseObj.get(key).pass == pass){
                 alert(`Hello, ${key},
                 welcome to your account`)
             } else {alert('Not correct login or password')}
         }
- //           myMap.set('change',responseObj.get(key));
         }
     }
     else if(status==404){
@@ -30,28 +28,31 @@ document.getElementById("btnForReg").addEventListener('click', function(){
     request.send();
     var status = request.status;
     if(status==200){
-    let responseObj = new Map(JSON.parse(request.response));
-    let login =  document.getElementById("loginReg").value;
-    let pass = document.getElementById("passwordReg").value;
-    let i =0;
-    for (var [key, value] of responseObj) {
-        console.log(responseObj.get(key));
-        if (responseObj.get(key).name == login) {  i++;} 
+        let responseObj = new Map(JSON.parse(request.response));
+        console.log(responseObj);
+        let login =  document.getElementById("loginReg").value;
+        let pass = document.getElementById("passwordReg").value;
+        let i =0;
+        for (var [key, value] of responseObj) {
+            if (responseObj.get(key).name == login) {  i++;} 
+        }
         if(i!=0){alert('there is an account with this login')}
-            else{
-                let stypid = new User(login, pass);
-                fetch('http://localhost:3000/users', {
+        else{
+            let stypid = new User(login, pass);
+            let stypidMap = new Map;
+            stypidMap.set(`${responseObj.size+1}`,stypid)
+            let rfgf=String (JSON.stringify([...stypidMap]))
+            fetch('http://localhost:3000/users', {
                 method: 'post',
                 headers: {
-                            'Accept': 'application/json, text/plain, */*',
-                            'Content-Type': 'application/json'
-                        },
-                body: JSON.stringify([...stypid])
-    })
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json'
+                    },
+                body: rfgf.slice(1, -1)
+            })
         }
+
     }
- //           myMap.set('change',responseObj.get(key));
-        }
     else if(status==404){
        console.log("Ресурс не найден")}
     else{
