@@ -71,6 +71,9 @@ header .logo {
     align-items: center;
     font-weight: 400;
     text-align: center;
+    text-transform: none;
+    text-decoration: none;
+    color: #000014;
 }
 header .logo h2{
     font-size: 35px;
@@ -98,7 +101,7 @@ header .menu li{
 header .menu li a {
     text-decoration: none;
     color: #000014;
-    font-size: 18px;
+    font-size: 20px;
     font-style: italic;
 }
 header .menu li #numberItems{
@@ -115,114 +118,33 @@ header .menu li #search{
     background-color: #030f3300;
     color: #000014;
 }
-.container1 {
-    display: flex;
+#map {
+    width: 60%;
+    height:400px;
 }
-.container1 .caryselDiv{
-    max-width: 60%;
-    width: 600px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-.container1 .caryselDiv .carysel {max-width: 520px;}
-.container1 .caryselDiv img{
-    position: relative;
-    max-width:100%;
-    height: 300px;
-    z-index: 2;
-}
-.container1 .caryselDiv .arrow{
-    position: relative;
-    z-index: 3;
-    border: 2px solid black;
-    padding: 5px;
-}
-.container1 .caryselDiv #arrLeft{left: 5px;}
-.container1 .caryselDiv #arrRight{left: -5px;}
-.container1 .active,.container2 .active {display: inline-block;}
-.container1 .notActive,.container2 .notActive {display: none;}
-.container1 #circles{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: -30px;
-    z-index: 3;
-}
-.container1 #circles span{margin: 2px;}
-.container1 .textCarysel{
-    max-width: 40%;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-.container1 .textCarysel h3{
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-.container1 .textCarysel p{
-    font-size: 18px;
-    margin-bottom: 10px;
-    margin-left: 3px;
-}
-.container2{
-    text-align: center;
-    padding-top: 30px;
-    background-color: #10033357;
-}
-.container2 h2{
-    font-size: 30px;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-.container2 #caryselDiv2{
-    margin-left: 5%;
-    max-width: 90%;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.container2 #caryselDiv2 .carysel {
-    max-width: 90%;
-     display: flex;
-     height: 100%;
-     align-items: center;
-     justify-content: space-between;
-}
-.container2 #caryselDiv2 li{width: 22%;}
-.container2 #caryselDiv2 img{
-    width:100%;
-}
-.container2 #caryselDiv2 .arrow{
-    border: 2px solid black;
-    padding: 5px;
-}
-.container3 {
-    padding-top: 20px;
-    display: flex;
-    margin-left: 2.5%;
+.flexx{
     width: 95%;
-    justify-content: space-between;
-    padding-bottom: 20px;
+    margin-left: 2.5%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+} 
+.stolb8{margin-left: 10px; 
+    display: flex;
+    align-items: center;
 }
-.container3 .col3{
-    width: 30%;
-}
-.container3 .col3 h3{
+.socseti{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000014;
+    border-radius: 100px; 
+    margin-right: 9px;
+    display: inline-block;
     text-align: center;
-    font-size: 22px;
-    margin-bottom: 10px;
 }
-.container3 .col3 p{
-    font-size: 16px;
-    margin-bottom: 10px;
-    margin-left: 3px;
+.socseti svg{
+    font-size: 18px;
+    margin-top: 10px;
+    color: #000014;
 }

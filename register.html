@@ -9,11 +9,14 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="logo">
-            <h2>CiberShop</h2>
-            <p>Shop for Ciber-IT</p>
-        </div>
-        <h1>SignUp</h1>
+        <a href="./index.html" class="logo">
+            <div><img src="./img/logo.png" alt="logo"></div>
+            <div>
+                <h2>CiberShop</h2>
+                <p>LowLife, HighTech</p>
+            </div>
+        </a>
+        <h1>SignUp:</h1>
     <form>
         <label for="login">Enter your Email: </label><input id="loginReg" type="text" required><br>
         <label for="password">Enter your password: </label><input id="passwordReg" type="text" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*"><br>
@@ -21,7 +24,8 @@
     </form>
 
     </div>
-    <script src="./script.js"></script>
+    <script src="./scripts/signUp.js"></script>
+    <script src="./scripts/script.js"></script>
     <script>alert("Поле пароля: Минимум 8 символов, одна цифра, одна буква в верхнем регистре и одна в нижнем")</script>
 </body>
 </html>

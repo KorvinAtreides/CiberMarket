@@ -26,7 +26,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    background-color:#91f074 !important;
+    background-color:#030f3362 !important;
+    color: #000014;
 }
 ol, ul {
 	list-style: none;
@@ -56,28 +57,41 @@ table {
     align-items: center;
     flex-direction: column;
 }
-
+.logo img{
+    height: 60px;
+    position: relative;
+    top: -10px;
+}
 .logo {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     font-weight: 400;
     text-align: center;
+    text-transform: none;
+    text-decoration: none;
+    color: #000014;
 }
 .logo h2{
-    font-size: 30px;
+    font-size: 35px;
     margin: 0px;
+    letter-spacing: 2px;
 }
 .logo p{
-    font-size: 20px;
+    font-size: 24px;
     letter-spacing: 1px;
     margin: 0px;
     padding-bottom: 15px;
 }
-
 label {
     font-size: 20px;
     width: 200px;
     display: inline-block;
     margin: 5px;
+}
+h1{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 input {
     font-size: 20px;
@@ -86,7 +100,7 @@ input {
 }
 #btnForLogin, #btnForReg {
     font-size: 20px;
-    background-color: darkseagreen;
+    background-color: #1d033379;
     display: inline-block;
     width: 100px;
     text-align: center;
