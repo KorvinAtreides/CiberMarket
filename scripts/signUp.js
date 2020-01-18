@@ -5,7 +5,8 @@ function User(name, pass){
     this.getType = function(){        return this.name;    }
     this.getDate = function(){        return this.pass;    }
 }
-if (document.getElementById("btnForReg") !== null){document.getElementById("btnForReg").addEventListener('click', function(){
+if (document.getElementById("btnForReg") !== null){
+    document.getElementById("btnForReg").addEventListener('click', function(){
     let valid=true;
     for(let inpyt of inpyts){
         if (inpyt.validity.valid == false) {

@@ -3,8 +3,8 @@
     [
       "1",
       {
-        "name": "13",
-        "pass": "Qwerty123"
+        "name": "ref",
+        "pass": "Serkek123"
       }
     ]
   ],
@@ -31,7 +31,7 @@
         "price": "560.21",
         "src": "./img/tools/tool2",
         "country": "Germany",
-        "sales": "No",
+        "sales": "2020-06-13T12:23:25.000Z",
         "number": "534"
       }
     ],
@@ -122,7 +122,7 @@
         "price": "24.99",
         "src": "./img/defence/binoculars/binocular1",
         "country": "China",
-        "sales": "No",
+        "sales": "2020-05-17T12:43:36.000Z",
         "number": "2180"
       }
     ],
