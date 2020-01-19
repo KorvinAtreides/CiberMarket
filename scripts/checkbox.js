@@ -4,7 +4,7 @@ if (document.getElementById("flexCatalog")!== null) {
         checkbox.addEventListener ("change", function () {
            if (document.getElementById("AllCategory").checked){
                 let checks=document.getElementsByClassName("checkCategory")
-                for(check of checks){
+                for(check of checks){//проверка для главного чек-бокса
                 check.checked=true
                 check.setAttribute('disabled',"disabled")
                 }
@@ -16,7 +16,7 @@ if (document.getElementById("flexCatalog")!== null) {
            }
            if (document.getElementById("defence").checked){
                 let checks=document.getElementsByClassName("defence")
-                for(check of checks){
+                for(check of checks){//проверка для категории дефенс
                 check.checked=true
                 check.setAttribute('disabled',"disabled")
                 }
@@ -28,7 +28,7 @@ if (document.getElementById("flexCatalog")!== null) {
            }
            if (document.getElementById("body").checked){
                 let checks=document.getElementsByClassName("Augmentations")
-                for(check of checks){
+                for(check of checks){//проверка для категории Augmentations
                 check.checked=true
                 check.setAttribute('disabled',"disabled")
                 }
@@ -40,7 +40,7 @@ if (document.getElementById("flexCatalog")!== null) {
            }
            if (document.getElementById("Allcountry").checked){
                 let checks=document.getElementsByClassName("checkCountry")
-                for(check of checks){
+                for(check of checks){//проверка для категории стран
                 check.checked=true
                 check.setAttribute('disabled',"disabled")
                 }
@@ -54,7 +54,7 @@ if (document.getElementById("flexCatalog")!== null) {
     }
 }
 
-if (document.getElementById("reset")!== null) {
+if (document.getElementById("reset")!== null) {//всё а стандартное значение
     document.getElementById("reset").addEventListener('click', function(){
         document.getElementById("AllCategory").checked=true
         let checks=document.getElementsByClassName("checkCategory")

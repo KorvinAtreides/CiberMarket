@@ -118,33 +118,81 @@ header .menu li #search{
     background-color: #030f3300;
     color: #000014;
 }
-#map {
-    width: 60%;
-    height:400px;
-}
-.flexx{
-    width: 95%;
-    margin-left: 2.5%;
+.flexCatalog{
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    margin-bottom: 20px;
-} 
-.stolb8{margin-left: 10px; 
+    width: 100%;
+}
+.flexCatalog .cabinet{
+    width: 25%;
+    max-width: 350px;
+    background-color: #10033357;
+    position: fixed;
+    height: 500px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    font-size: 18px;
+    color: #000014;
 }
-.socseti{
-    width: 40px;
-    height: 40px;
-    border: 1px solid #000014;
-    border-radius: 100px; 
-    margin-right: 9px;
-    display: inline-block;
+
+.flexCatalog h3{
+    font-size: 24px;
+    color: #000014;
     text-align: center;
 }
-.socseti svg{
-    font-size: 18px;
-    margin-top: 10px;
+
+.flexCatalog .cabinet .btnFiltr, .btnBranch{
+    background-color: #1d033379;
+    padding: 5px 10px 5px 10px;
+    margin: 5px 10px;
+}
+
+.flexCatalog .liCatalog{
+    margin-left: 25%;
+    width: 75%;
+}
+.flexCatalog .liCatalog #catalog{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.flexCatalog .liCatalog #catalog li{
+    width: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #10033357;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+.flexCatalog .liCatalog #catalog li img{
+    max-width: 100%;
+}
+.flexCatalog .liCatalog #catalog li input{
+    width: 40px;
+    font-size: 16px;
+    background-color: #030f3300;
     color: #000014;
+    text-align: center;
+}
+.divSale {
+    position: absolute;
+    top: 80px;
+    font-weight: 800;
+    font-size: 24px;
+    text-align: center;
+    color: red;
+}
+.divSale h3{
+    font-size: 28px;
+    text-align: center;
+    color: red;
+    font-weight: 800;
+}
+.counter{
+    display: flex;
+    justify-content: center;
 }

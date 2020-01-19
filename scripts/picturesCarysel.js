@@ -2,7 +2,7 @@ function goods(id, name, category, price, src, country, sales, number){
     this.id = id;
     this.name = name;
     this.category = category;
-    this.price = price;
+    this.price = price;  //мне так этот класс и не понадобился, странно
     this.src = src;
     this.country = country;
     this.sales = sales;
@@ -25,21 +25,22 @@ if (document.getElementById("carysel2")!== null) {
         let responseObj = new Map(JSON.parse(request.response));
 
         let len1 = document.getElementById("carysel1").children.length;
-        let first =["23","26","13","47","37","2","4"]
-        for (let i = 0; i < len1; i++){
+        let first =["23","26","13","47","37","2","4"] //я просто ввёл айди самых красивых 
+        for (let i = 0; i < len1; i++){ // элементов для главной карусели
             document.getElementById("carysel1").children[i].innerHTML=`<img src="${responseObj.get(first[i]).src}.png"</img>`
         }
 
         let k=0;
         let endtime =[];
         for (var [key, value] of responseObj) {
-            if (responseObj.get(key).sales !=="No" ) {
-                endtime[k]=key;
-                k++;
+            if (value.sales !=="No" ) {
+                endtime[k]=key; //запись айди элементов
+                k++; //имеющих статус распродажи
             } 
         }
         let len2=document.getElementById("carysel2").children.length;
-        for (let i = 0; i < len2; i++){
+        for (let i = 0; i < len2; i++){ // можно или вообще все выложить
+            // или ограничиться первыми в списке по кол-ву li в карусели
             document.getElementById("carysel2").children[i].innerHTML=`<img src="${responseObj.get(endtime[i]).src}.png"</img><div></div>`
             initializeClock(document.getElementById("carysel2").children[i], responseObj.get(endtime[i]).sales)
         }

@@ -12,7 +12,7 @@ function init () {
         type: 'yandex#hybrid'
     }, {
         searchControlProvider: 'yandex#search'
-    }),
+    }), //метка
      myPlacemark = new ymaps.GeoObject({
         geometry: {
             type: "Point",

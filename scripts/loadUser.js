@@ -1,4 +1,4 @@
-if  (document.getElementById("menuUl") !== null){
+if  (document.getElementById("menuUl") !== null){ //проверка есть ли в системе пользователь
     if (localStorage.getItem("currentUser")!=undefined){
         let children=document.getElementById("menuUl").children
         let len =children.length
@@ -8,7 +8,9 @@ if  (document.getElementById("menuUl") !== null){
 }
 if (document.getElementById("LogOut") !== null) {
     document.getElementById("LogOut").addEventListener('click', function(){
-        localStorage.removeItem("currentUser")
+        localStorage.removeItem("currentUser")//обнуление корзины и юзера
+        localStorage.removeItem("goodsInBranch")
+        document.getElementById("numberItems").value=0
         let children=document.getElementById("menuUl").children
         let len =children.length
         children[len-1].innerHTML=`

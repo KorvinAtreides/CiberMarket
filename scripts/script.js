@@ -15,7 +15,7 @@ function inpytVal(){
 if (document.getElementById("numberItems") !== null){
     branchLabel();
 }
-function branchLabel(){
+function branchLabel(){ // проверяем количествво элементов в корзине
     let numberItems =0;
     let mapGoods
     if (localStorage.getItem("goodsInBranch")!=undefined){
