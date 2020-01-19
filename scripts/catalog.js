@@ -1,21 +1,3 @@
-function goods(id, name, category, price, src, country, sales, number){
-    this.id = id;
-    this.name = name;
-    this.category = category;
-    this.price = price;
-    this.src = src;
-    this.country = country;
-    this.sales = sales;
-    this.number = number;
-    this.getId = function(){        return this.id;    }
-    this.getName = function(){        return this.name;    }
-    this.getCategory = function(){        return this.category;    }
-    this.getPrice = function(){        return this.price;    }
-    this.getSrc = function(){        return this.src;    }
-    this.getCountry = function(){        return this.country;    }
-    this.getSales = function(){        return this.sales;    }
-    this.getNumber = function(){        return this.number;    }
-}
 if (document.getElementById("catalog")!== null) {
     var request = new XMLHttpRequest();
     request.open("GET", "http://localhost:3000/goods", false);
@@ -37,13 +19,14 @@ if (document.getElementById("catalog")!== null) {
                 </div>
                 <h3>Price per one item: ${responseObj.get(String(i+1)).price}$</h3>
                 <h3>Made in ${responseObj.get(String(i+1)).country}</h3>
-                <div class="btnBranch" id="btn${responseObj.get(String(i+1)).id}">
+                <div class="btnBranch" id="btnBranch${responseObj.get(String(i+1)).id}">
                 <h3>Add into Branch</h3>
                 </div>
                 <div class="divSale" id="divSale${i+1}">
                 </div>
             </div>`
             inpytVal();
+            addBranch(`btnBranch${responseObj.get(String(i+1)).id}`);
             if (responseObj.get(String(i+1)).sales!="No") {
                 document.getElementById(`divSale${i+1}`).innerHTML+=`<h3>Sales!</h3><div></div>`
                 initializeClock(document.getElementById(`divSale${i+1}`), responseObj.get(String(i+1)).sales)
@@ -101,18 +84,26 @@ if (document.getElementById("confirm")!== null) {
                             </div>
                             <h3>Price per one item: ${responseObj.get(String(i+1)).price}$</h3>
                             <h3>Made in ${responseObj.get(String(i+1)).country}</h3>
-                            <div class="btnBranch" id="btn${responseObj.get(String(i+1)).id}">
+                            <div class="btnBranch" id="btnBranch${responseObj.get(String(i+1)).id}">
                             <h3>Add into Branch</h3>
                             </div>
                             <div class="divSale" id="divSale${i+1}">
                             </div>
                         </div>`
                         inpytVal();
+                        addBranch(`btnBranch${responseObj.get(String(i+1)).id}`);
                         if (responseObj.get(String(i+1)).sales!="No") {
                             document.getElementById(`divSale${i+1}`).innerHTML+=`<h3>Sales!</h3><div></div>`
                             initializeClock(document.getElementById(`divSale${i+1}`), responseObj.get(String(i+1)).sales)
                         }
                     }
+                }
+                if (ul.innerHTML==""){
+                    ul.innerHTML=
+                    `<div>
+                        <h3>Sorry, we couldn't found anything</h3>
+                        <h3>Please, make another try</h3>
+                    </div>`
                 }
                 clickArrow();
             }
@@ -139,7 +130,23 @@ function clickArrow(){
         })
     }
 }
-
+function addBranch(id){
+    let elem =document.getElementById(String(id))
+    elem.addEventListener ("click", function () {
+        let number = elem.previousElementSibling.previousElementSibling.previousElementSibling.children[1].value
+        let mapGoods 
+        if (localStorage.getItem("goodsInBranch")!=undefined){
+            mapGoods = new Map (JSON.parse(localStorage.getItem("goodsInBranch")))
+        }  else{mapGoods = new Map()}
+        if (mapGoods.get(String(id))!=undefined){
+            let was = mapGoods.get(String(id))
+            mapGoods.delete(String(id))
+            mapGoods.set(String(id),Number(was)+Number(number))
+        } else {mapGoods.set(String(id),Number(number))}
+        localStorage.setItem("goodsInBranch",JSON.stringify([...mapGoods]))
+        branchLabel()
+    })
+}
 
 if (document.getElementsByTagName("input") !== null){
     var inpyts = document.getElementsByTagName("input");
@@ -188,4 +195,15 @@ function initializeClock(elem, endtime){
       clearInterval(timeinterval);
      }
     },1000);
+}
+function branchLabel(){
+    let numberItems =0;
+    let mapGoods
+    if (localStorage.getItem("goodsInBranch")!=undefined){
+        mapGoods = new Map (JSON.parse(localStorage.getItem("goodsInBranch")))
+        for (let [key, value] of mapGoods) {
+            numberItems+=value;
+        }
+        document.getElementById("numberItems").value=numberItems;
+    }  else{document.getElementById("numberItems").value=0}
 }
