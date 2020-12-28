@@ -52,7 +52,7 @@
         "price": "560.21",
         "src": "./img/tools/tool2",
         "country": "Germany",
-        "sales": "2020-06-13T12:23:25.000Z",
+        "sales": "2022-06-13T12:23:25.000Z",
         "number": "534"
       }
     ],
@@ -65,7 +65,7 @@
         "price": "434.05",
         "src": "./img/tools/tool3",
         "country": "China",
-        "sales": "2020-11-25T14:42:21.416Z",
+        "sales": "2022-11-25T14:42:21.416Z",
         "number": "48"
       }
     ],
@@ -91,7 +91,7 @@
         "price": "1340.16",
         "src": "./img/dogs/dog1",
         "country": "Germany",
-        "sales": "2020-06-13T11:23:14.416Z",
+        "sales": "2022-06-13T11:23:14.416Z",
         "number": "543"
       }
     ],
@@ -143,7 +143,7 @@
         "price": "24.99",
         "src": "./img/defence/binoculars/binocular1",
         "country": "China",
-        "sales": "2020-05-17T12:43:36.000Z",
+        "sales": "2022-05-17T12:43:36.000Z",
         "number": "2180"
       }
     ],
@@ -260,7 +260,7 @@
         "price": "364.21",
         "src": "./img/defence/equipment/jamm6",
         "country": "Japan",
-        "sales": "2020-08-26T23:59:59.000Z",
+        "sales": "2022-08-26T23:59:59.000Z",
         "number": "142"
       }
     ],
@@ -351,7 +351,7 @@
         "price": "2189.41",
         "src": "./img/defence/laser/laser3",
         "country": "Germany",
-        "sales": "2020-09-06T18:12:23.000Z",
+        "sales": "2022-09-06T18:12:23.000Z",
         "number": "49"
       }
     ],
@@ -377,7 +377,7 @@
         "price": "1869.23",
         "src": "./img/defence/laser/laser5",
         "country": "Japan",
-        "sales": "2020-05-03T12:02:03.000Z",
+        "sales": "2022-05-03T12:02:03.000Z",
         "number": "90"
       }
     ],
@@ -481,7 +481,7 @@
         "price": "312.40",
         "src": "./img/body/arms/arm3",
         "country": "Germany",
-        "sales": "2020-04-18T16:16:16.000Z",
+        "sales": "2022-04-18T16:16:16.000Z",
         "number": "312"
       }
     ],
@@ -572,7 +572,7 @@
         "price": "290.57",
         "src": "./img/body/eye/eye2",
         "country": "Japan",
-        "sales": "2020-08-23T08:10:18.000Z",
+        "sales": "2022-08-23T08:10:18.000Z",
         "number": "875"
       }
     ],
@@ -637,7 +637,7 @@
         "price": "843.53",
         "src": "./img/body/heart/heart1",
         "country": "Japan",
-        "sales": "2020-10-03T06:00:02.000Z",
+        "sales": "2022-10-03T06:00:02.000Z",
         "number": "621"
       }
     ],
