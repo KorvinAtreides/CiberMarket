@@ -37,7 +37,7 @@
         "name": "tool1",
         "category": "tools",
         "price": "348.18",
-        "src": "./img/tools/tool1",
+        "src": "./src/src/img/tools/tool1",
         "country": "Germany",
         "sales": "No",
         "number": "245"
@@ -50,7 +50,7 @@
         "name": "tool2",
         "category": "tools",
         "price": "560.21",
-        "src": "./img/tools/tool2",
+        "src": "./src/img/tools/tool2",
         "country": "Germany",
         "sales": "2022-06-13T12:23:25.000Z",
         "number": "534"
@@ -63,7 +63,7 @@
         "name": "tool3",
         "category": "tools",
         "price": "434.05",
-        "src": "./img/tools/tool3",
+        "src": "./src/img/tools/tool3",
         "country": "China",
         "sales": "2022-11-25T14:42:21.416Z",
         "number": "48"
@@ -76,7 +76,7 @@
         "name": "tool4",
         "category": "tools",
         "price": "715.32",
-        "src": "./img/tools/tool4",
+        "src": "./src/img/tools/tool4",
         "country": "Japan",
         "sales": "No",
         "number": "412"
@@ -89,7 +89,7 @@
         "name": "dog1",
         "category": "dogs",
         "price": "1340.16",
-        "src": "./img/dogs/dog1",
+        "src": "./src/img/dogs/dog1",
         "country": "Germany",
         "sales": "2022-06-13T11:23:14.416Z",
         "number": "543"
@@ -102,7 +102,7 @@
         "name": "dog2",
         "category": "dogs",
         "price": "653.13",
-        "src": "./img/dogs/dog2",
+        "src": "./src/img/dogs/dog2",
         "country": "Germany",
         "sales": "No",
         "number": "43"
@@ -115,7 +115,7 @@
         "name": "dog3",
         "category": "dogs",
         "price": "958.76",
-        "src": "./img/dogs/dog3",
+        "src": "./src/img/dogs/dog3",
         "country": "Germany",
         "sales": "No",
         "number": "152"
@@ -128,7 +128,7 @@
         "name": "dog4",
         "category": "dogs",
         "price": "450.32",
-        "src": "./img/dogs/dog4",
+        "src": "./src/img/dogs/dog4",
         "country": "China",
         "sales": "No",
         "number": "890"
@@ -141,7 +141,7 @@
         "name": "binocular1",
         "category": "binoculars",
         "price": "24.99",
-        "src": "./img/defence/binoculars/binocular1",
+        "src": "./src/img/defence/binoculars/binocular1",
         "country": "China",
         "sales": "2022-05-17T12:43:36.000Z",
         "number": "2180"
@@ -154,7 +154,7 @@
         "name": "binocular2",
         "category": "binoculars",
         "price": "42.58",
-        "src": "./img/defence/binoculars/binocular2",
+        "src": "./src/img/defence/binoculars/binocular2",
         "country": "Germany",
         "sales": "No",
         "number": "5243"
@@ -167,7 +167,7 @@
         "name": "binocular3",
         "category": "binoculars",
         "price": "34.18",
-        "src": "./img/defence/binoculars/binocular3",
+        "src": "./src/img/defence/binoculars/binocular3",
         "country": "Japan",
         "sales": "No",
         "number": "2180"
@@ -180,7 +180,7 @@
         "name": "binocular4",
         "category": "binoculars",
         "price": "36.32",
-        "src": "./img/defence/binoculars/binocular4",
+        "src": "./src/img/defence/binoculars/binocular4",
         "country": "Germany",
         "sales": "No",
         "number": "2143"
@@ -193,7 +193,7 @@
         "name": "jamm1",
         "category": "jammers",
         "price": "230.16",
-        "src": "./img/defence/equipment/jamm1",
+        "src": "./src/img/defence/equipment/jamm1",
         "country": "China",
         "sales": "No",
         "number": "435"
@@ -206,7 +206,7 @@
         "name": "jamm2",
         "category": "jammers",
         "price": "280.65",
-        "src": "./img/defence/equipment/jamm2",
+        "src": "./src/img/defence/equipment/jamm2",
         "country": "Germany",
         "sales": "No",
         "number": "234"
@@ -219,7 +219,7 @@
         "name": "jamm3",
         "category": "jammers",
         "price": "180.32",
-        "src": "./img/defence/equipment/jamm3",
+        "src": "./src/img/defence/equipment/jamm3",
         "country": "China",
         "sales": "No",
         "number": "356"
@@ -232,7 +232,7 @@
         "name": "jamm4",
         "category": "jammers",
         "price": "421.29",
-        "src": "./img/defence/equipment/jamm4",
+        "src": "./src/img/defence/equipment/jamm4",
         "country": "Germany",
         "sales": "No",
         "number": "6902"
@@ -245,7 +245,7 @@
         "name": "jamm5",
         "category": "jammers",
         "price": "380.33",
-        "src": "./img/defence/equipment/jamm5",
+        "src": "./src/img/defence/equipment/jamm5",
         "country": "Japan",
         "sales": "No",
         "number": "1243"
@@ -258,7 +258,7 @@
         "name": "jamm6",
         "category": "jammers",
         "price": "364.21",
-        "src": "./img/defence/equipment/jamm6",
+        "src": "./src/img/defence/equipment/jamm6",
         "country": "Japan",
         "sales": "2022-08-26T23:59:59.000Z",
         "number": "142"
@@ -271,7 +271,7 @@
         "name": "jamm7",
         "category": "jammers",
         "price": "280.84",
-        "src": "./img/defence/equipment/jamm7",
+        "src": "./src/img/defence/equipment/jamm7",
         "country": "China",
         "sales": "No",
         "number": "213"
@@ -284,7 +284,7 @@
         "name": "signal1",
         "category": "signaling",
         "price": "149.99",
-        "src": "./img/defence/signaling/signal1",
+        "src": "./src/img/defence/signaling/signal1",
         "country": "Japan",
         "sales": "No",
         "number": "634"
@@ -297,7 +297,7 @@
         "name": "signal2",
         "category": "signaling",
         "price": "186.23",
-        "src": "./img/defence/signaling/signal2",
+        "src": "./src/img/defence/signaling/signal2",
         "country": "Japan",
         "sales": "No",
         "number": "183"
@@ -310,7 +310,7 @@
         "name": "signal3",
         "category": "signaling",
         "price": "214.53",
-        "src": "./img/defence/signaling/signal3",
+        "src": "./src/img/defence/signaling/signal3",
         "country": "Germany",
         "sales": "No",
         "number": "1235"
@@ -323,7 +323,7 @@
         "name": "laser1",
         "category": "laser",
         "price": "1423.56",
-        "src": "./img/defence/laser/laser1",
+        "src": "./src/img/defence/laser/laser1",
         "country": "Germany",
         "sales": "No",
         "number": "34"
@@ -336,7 +336,7 @@
         "name": "laser2",
         "category": "laser",
         "price": "1615.19",
-        "src": "./img/defence/laser/laser2",
+        "src": "./src/img/defence/laser/laser2",
         "country": "Germany",
         "sales": "No",
         "number": "25"
@@ -349,7 +349,7 @@
         "name": "laser3",
         "category": "laser",
         "price": "2189.41",
-        "src": "./img/defence/laser/laser3",
+        "src": "./src/img/defence/laser/laser3",
         "country": "Germany",
         "sales": "2022-09-06T18:12:23.000Z",
         "number": "49"
@@ -362,7 +362,7 @@
         "name": "laser4",
         "category": "laser",
         "price": "1633.18",
-        "src": "./img/defence/laser/laser4",
+        "src": "./src/img/defence/laser/laser4",
         "country": "Germany",
         "sales": "No",
         "number": "134"
@@ -375,7 +375,7 @@
         "name": "laser5",
         "category": "laser",
         "price": "1869.23",
-        "src": "./img/defence/laser/laser5",
+        "src": "./src/img/defence/laser/laser5",
         "country": "Japan",
         "sales": "2022-05-03T12:02:03.000Z",
         "number": "90"
@@ -388,7 +388,7 @@
         "name": "laser6",
         "category": "laser",
         "price": "890.01",
-        "src": "./img/defence/laser/laser6",
+        "src": "./src/img/defence/laser/laser6",
         "country": "China",
         "sales": "No",
         "number": "34"
@@ -401,7 +401,7 @@
         "name": "laser7",
         "category": "laser",
         "price": "2020.01",
-        "src": "./img/defence/laser/laser7",
+        "src": "./src/img/defence/laser/laser7",
         "country": "Japan",
         "sales": "No",
         "number": "16"
@@ -414,7 +414,7 @@
         "name": "laser8",
         "category": "laser",
         "price": "1643.77",
-        "src": "./img/defence/laser/laser8",
+        "src": "./src/img/defence/laser/laser8",
         "country": "Japan",
         "sales": "No",
         "number": "37"
@@ -427,7 +427,7 @@
         "name": "laser9",
         "category": "laser",
         "price": "917.21",
-        "src": "./img/defence/laser/laser9",
+        "src": "./src/img/defence/laser/laser9",
         "country": "China",
         "sales": "No",
         "number": "189"
@@ -440,7 +440,7 @@
         "name": "laser10",
         "category": "laser",
         "price": "618.73",
-        "src": "./img/defence/laser/laser10",
+        "src": "./src/img/defence/laser/laser10",
         "country": "China",
         "sales": "No",
         "number": "431"
@@ -453,7 +453,7 @@
         "name": "arm1",
         "category": "arms",
         "price": "340.21",
-        "src": "./img/body/arms/arm1",
+        "src": "./src/img/body/arms/arm1",
         "country": "China",
         "sales": "No",
         "number": "234"
@@ -466,7 +466,7 @@
         "name": "arm2",
         "category": "arms",
         "price": "215.81",
-        "src": "./img/body/arms/arm2",
+        "src": "./src/img/body/arms/arm2",
         "country": "China",
         "sales": "No",
         "number": "431"
@@ -479,7 +479,7 @@
         "name": "arm3",
         "category": "arms",
         "price": "312.40",
-        "src": "./img/body/arms/arm3",
+        "src": "./src/img/body/arms/arm3",
         "country": "Germany",
         "sales": "2022-04-18T16:16:16.000Z",
         "number": "312"
@@ -492,7 +492,7 @@
         "name": "arm4",
         "category": "arms",
         "price": "240.85",
-        "src": "./img/body/arms/arm4",
+        "src": "./src/img/body/arms/arm4",
         "country": "China",
         "sales": "No",
         "number": "75"
@@ -505,7 +505,7 @@
         "name": "arm5",
         "category": "arms",
         "price": "277.63",
-        "src": "./img/body/arms/arm5",
+        "src": "./src/img/body/arms/arm5",
         "country": "Germany",
         "sales": "No",
         "number": "185"
@@ -518,7 +518,7 @@
         "name": "arm6",
         "category": "arms",
         "price": "440.19",
-        "src": "./img/body/arms/arm6",
+        "src": "./src/img/body/arms/arm6",
         "country": "Japan",
         "sales": "No",
         "number": "40"
@@ -531,7 +531,7 @@
         "name": "arm7",
         "category": "arms",
         "price": "362.84",
-        "src": "./img/body/arms/arm7",
+        "src": "./src/img/body/arms/arm7",
         "country": "Japan",
         "sales": "No",
         "number": "37"
@@ -544,7 +544,7 @@
         "name": "arm8",
         "category": "arms",
         "price": "402.78",
-        "src": "./img/body/arms/arm8",
+        "src": "./src/img/body/arms/arm8",
         "country": "Japan",
         "sales": "No",
         "number": "16"
@@ -557,7 +557,7 @@
         "name": "eye1",
         "category": "eyes",
         "price": "270.32",
-        "src": "./img/body/eye/eye1",
+        "src": "./src/img/body/eye/eye1",
         "country": "Japan",
         "sales": "No",
         "number": "231"
@@ -570,7 +570,7 @@
         "name": "eye2",
         "category": "eyes",
         "price": "290.57",
-        "src": "./img/body/eye/eye2",
+        "src": "./src/img/body/eye/eye2",
         "country": "Japan",
         "sales": "2022-08-23T08:10:18.000Z",
         "number": "875"
@@ -583,7 +583,7 @@
         "name": "eye3",
         "category": "eyes",
         "price": "243.71",
-        "src": "./img/body/eye/eye3",
+        "src": "./src/img/body/eye/eye3",
         "country": "Japan",
         "sales": "No",
         "number": "54"
@@ -596,7 +596,7 @@
         "name": "eye4",
         "category": "eyes",
         "price": "362.81",
-        "src": "./img/body/eye/eye4",
+        "src": "./src/img/body/eye/eye4",
         "country": "China",
         "sales": "No",
         "number": "12"
@@ -609,7 +609,7 @@
         "name": "eye5",
         "category": "eyes",
         "price": "168.41",
-        "src": "./img/body/eye/eye5",
+        "src": "./src/img/body/eye/eye5",
         "country": "China",
         "sales": "No",
         "number": "832"
@@ -622,7 +622,7 @@
         "name": "eye6",
         "category": "eyes",
         "price": "297.26",
-        "src": "./img/body/eye/eye6",
+        "src": "./src/img/body/eye/eye6",
         "country": "Germany",
         "sales": "No",
         "number": "34"
@@ -635,7 +635,7 @@
         "name": "heart1",
         "category": "hearts",
         "price": "843.53",
-        "src": "./img/body/heart/heart1",
+        "src": "./src/img/body/heart/heart1",
         "country": "Japan",
         "sales": "2022-10-03T06:00:02.000Z",
         "number": "621"
@@ -648,7 +648,7 @@
         "name": "heart2",
         "category": "hearts",
         "price": "629.47",
-        "src": "./img/body/heart/heart2",
+        "src": "./src/img/body/heart/heart2",
         "country": "Japan",
         "sales": "No",
         "number": "194"
@@ -661,7 +661,7 @@
         "name": "heart3",
         "category": "hearts",
         "price": "712.34",
-        "src": "./img/body/heart/heart3",
+        "src": "./src/img/body/heart/heart3",
         "country": "Germany",
         "sales": "No",
         "number": "340"
@@ -674,7 +674,7 @@
         "name": "heart4",
         "category": "hearts",
         "price": "785.72",
-        "src": "./img/body/heart/heart4",
+        "src": "./src/img/body/heart/heart4",
         "country": "Germany",
         "sales": "No",
         "number": "219"
@@ -687,7 +687,7 @@
         "name": "heart5",
         "category": "hearts",
         "price": "383.61",
-        "src": "./img/body/heart/heart5",
+        "src": "./src/img/body/heart/heart5",
         "country": "China",
         "sales": "No",
         "number": "653"
@@ -700,7 +700,7 @@
         "name": "heart6",
         "category": "hearts",
         "price": "481.32",
-        "src": "./img/body/heart/heart6",
+        "src": "./src/img/body/heart/heart6",
         "country": "China",
         "sales": "No",
         "number": "526"
@@ -713,7 +713,7 @@
         "name": "heart7",
         "category": "hearts",
         "price": "391.58",
-        "src": "./img/body/heart/heart7",
+        "src": "./src/img/body/heart/heart7",
         "country": "China",
         "sales": "No",
         "number": "859"
@@ -726,7 +726,7 @@
         "name": "leg1",
         "category": "legs",
         "price": "803.23",
-        "src": "./img/body/leg/leg1",
+        "src": "./src/img/body/leg/leg1",
         "country": "Japan",
         "sales": "No",
         "number": "46"
@@ -739,7 +739,7 @@
         "name": "leg2",
         "category": "legs",
         "price": "681.68",
-        "src": "./img/body/leg/leg2",
+        "src": "./src/img/body/leg/leg2",
         "country": "China",
         "sales": "No",
         "number": "346"
@@ -752,7 +752,7 @@
         "name": "leg3",
         "category": "legs",
         "price": "855.31",
-        "src": "./img/body/leg/leg3",
+        "src": "./src/img/body/leg/leg3",
         "country": "Japan",
         "sales": "No",
         "number": "395"
@@ -765,7 +765,7 @@
         "name": "leg4",
         "category": "legs",
         "price": "130.70",
-        "src": "./img/body/leg/leg4",
+        "src": "./src/img/body/leg/leg4",
         "country": "China",
         "sales": "No",
         "number": "80"
@@ -778,7 +778,7 @@
         "name": "leg5",
         "category": "legs",
         "price": "786.54",
-        "src": "./img/body/leg/leg5",
+        "src": "./src/img/body/leg/leg5",
         "country": "Germany",
         "sales": "No",
         "number": "190"
@@ -791,7 +791,7 @@
         "name": "leg6",
         "category": "legs",
         "price": "863.72",
-        "src": "./img/body/leg/leg6",
+        "src": "./src/img/body/leg/leg6",
         "country": "Japan",
         "sales": "No",
         "number": "31"
@@ -804,7 +804,7 @@
         "name": "leg7",
         "category": "legs",
         "price": "455.61",
-        "src": "./img/body/leg/leg7",
+        "src": "./src/img/body/leg/leg7",
         "country": "China",
         "sales": "No",
         "number": "192"
