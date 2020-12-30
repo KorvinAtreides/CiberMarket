@@ -1,33 +1,26 @@
 {
   "users": [
-    [
-      "1",
-      {
+    {
+      "id": "1",
+      "user": {
+        "name": "Clerick",
+        "pass": "Tetrogrammaton4000"
+      }
+    },
+    {
+      "id": "2",
+      "user": {
+        "name": "Admin",
+        "pass": "Admin1234"
+      }
+    },
+    {
+      "id": "3",
+      "user": {
         "name": "kek",
         "pass": "Kek12345"
       }
-    ],
-    [
-      "2",
-      {
-        "name": "ergfrf",
-        "pass": "VV142334d"
-      }
-    ],
-    [
-      "3",
-      {
-        "name": "4t5rtre",
-        "pass": "rVVVVV3554"
-      }
-    ],
-    [
-      "4",
-      {
-        "name": "укаув",
-        "pass": "rgfdfbhR232"
-      }
-    ]
+    }
   ],
   "goods": [
     [

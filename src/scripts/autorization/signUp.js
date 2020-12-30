@@ -1,7 +1,7 @@
 import User from "../constructor/user.js";
 import inputsValidity from "../loadPages/inputsValidity";
 
-if (document.getElementById("btnForReg") !== null) {
+export default function signUp() {
   btnForReg.addEventListener("click", function () {
     inputsValidity();
     if (loginReg.value != "" && passwordReg.value != "") {
@@ -10,12 +10,12 @@ if (document.getElementById("btnForReg") !== null) {
       request.send();
       let status = request.status;
       if (status == 200) {
-        let responseObj = new Map(JSON.parse(request.response));
+        let responseObj = JSON.parse(request.response);
         let login = document.getElementById("loginReg").value;
         let pass = document.getElementById("passwordReg").value;
         let i = 0;
-        for (let [key, value] of responseObj) {
-          if (value.name == login) {
+        for (let j = 0; j < responseObj.length; j++) {
+          if (responseObj[j].user.name == login) {
             i++;
           }
         } // если нашёл юзера с таким же логином - алерт
@@ -23,21 +23,15 @@ if (document.getElementById("btnForReg") !== null) {
           alert("there is an account with this login");
         } else {
           let user = new User(login, pass);
-          let userMap = new Map();
-          userMap.set(`${responseObj.size + 1}`, user);
-          //  JSON.stringify плохо переносит Map, этот фокус позволяет
-          // преобразовать Map в JSON, но там образуются лишние скобки []
-          //  json-server их считает лишними и отказыается делать post
-          // slice их убирает
-          //  с localStorage таких проблем нет, записывается и считывается без слайса
-          let rfgf = String(JSON.stringify([...userMap]));
+          let data = [];
+          data[0] = { id: `${responseObj.length + 1}`, user: user };
           fetch("http://localhost:3000/users", {
             method: "post",
             headers: {
               Accept: "application/json, text/plain, */*",
               "Content-Type": "application/json",
             },
-            body: rfgf.slice(1, -1),
+            body: JSON.stringify(data[0]),
           });
           alert(`thanks for registration, ${login}`);
           let currentUser = login;

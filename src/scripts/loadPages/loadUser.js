@@ -6,7 +6,7 @@ export default function loadUser() {
       menuUl.children[len - 1].innerHTML = `
         Hello, ${localStorage.getItem(
           "currentUser"
-        )}!<br><a href="./PersonalCabinet.html">Personal Cabinet</a> <br> <a id="logOut">LogOut</a></li>`;
+        )}!<br><a href="./personalCabinet.html">Personal Cabinet</a> <br> <a id="logOut">LogOut</a></li>`;
       logOut.addEventListener("click", function () {
         localStorage.removeItem("currentUser"); //обнуление корзины и юзера
         localStorage.removeItem("goodsInBranch");

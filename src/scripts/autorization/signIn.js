@@ -5,13 +5,14 @@ export default function signIn() {
     request.send();
     let status = request.status;
     if (status == 200) {
-      let responseObj = new Map(JSON.parse(request.response)); //запрос на сервер
+      let responseObj = JSON.parse(request.response);
       let i = 0;
-      for (let [key, value] of responseObj) {
-        if (value.name == login.value && value.pass == password.value) {
-          i++; //простейшая проверка на правильность
-          alert(`Hello, ${value.name},welcome to your account`);
-          let currentUser = value.name;
+      for (let j = 0; j < responseObj.length; j++) {
+        let checkUser = responseObj[j].user;
+        if (checkUser.name == login.value && checkUser.pass == password.value) {
+          i++;
+          alert(`Hello, ${checkUser.name},welcome to your account`);
+          let currentUser = checkUser.name;
           localStorage.setItem("currentUser", currentUser);
           document.location.href = "./index.html";
         }

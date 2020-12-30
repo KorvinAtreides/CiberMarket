@@ -1,11 +1,12 @@
 export default function loadYandexMap() {
   // Дождёмся загрузки API и готовности DOM.
   ymaps.ready(init);
-  var myMap;
+  let yandexMap;
+  let myPlacemark;
   function init() {
     // Создание экземпляра карты и его привязка к контейнеру с
     // заданным id ("map").
-    (myMap = new ymaps.Map(
+    (yandexMap = new ymaps.Map(
       "map",
       {
         // При инициализации карты обязательно нужно указать
@@ -36,6 +37,6 @@ export default function loadYandexMap() {
           preset: "islands#blackStretchyIcon",
         }
       ));
-    myMap.geoObjects.add(myPlacemark);
+    yandexMap.geoObjects.add(myPlacemark);
   }
 }
