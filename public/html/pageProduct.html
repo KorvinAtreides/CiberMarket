@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page Product</title>
+    <link rel="stylesheet" href="./style/pageProduct.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="./index.html" class="logo">
+                <div><img src="./img/logo.png" alt="logo"></div>
+                <div>
+                    <h2>CiberMarket</h2>
+                    <p>LowLife, HighTech</p>
+                </div>
+            </a>
+            <ul class="menu" id="menuUl">
+                <li><a href="./productCatalog.html">Product Catalog</a></li>
+                <li><a href="./company.html">About Us</a></li>
+                <li><a href="./branch.html"><i class="fas fa-shopping-basket"></i></a> <input id="numberItems" type="text" value="0" disabled></li>
+                <li><input type="text" id="search"><span id="searchBtn"><i class="fas fa-search"></i></li>
+                <li>Hello, visitor! <br> <a href="./login.html">SignIn </a>or <a href="./register.html">SignUp</a></li>
+            </ul>
+        </header>
+        <div class="flexProd" id="flexProd">
+        </div>
+        <div class="response">
+            <div class="now">
+                <div id="areacomments">
+                    <h3>Comments:</h3>
+                </div>
+                <textarea name="comment" id="" rows="5"></textarea>
+                <div id="sendComment">Send</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="fontawesome/js/all.js"></script>
+</body>
+</html>

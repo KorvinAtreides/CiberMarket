@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="./style/styleCatalog.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+</head>
+<body>
+    <div class="wrapper">
+            <header>
+                <a href="./index.html" class="logo">
+                    <div><img src="./img/logo.png" alt="logo"></div>
+                    <div>
+                        <h2>CiberMarket</h2>
+                        <p>LowLife, HighTech</p>
+                    </div>
+                </a>
+                <ul class="menu" id="menuUl">
+                    <li><a href="#">Product Catalog</a></li>
+                    <li><a href="./company.html">About Us</a></li>
+                    <li><a href="./branch.html"><i class="fas fa-shopping-basket"></i></a> <input id="numberItems" type="text" value="0" disabled></li>
+                    <li><input type="text" id="search"><span id="searchBtn"><i class="fas fa-search"></i></li>
+                    <li>Hello, visitor! <br> <a href="./login.html">SignIn </a>or <a href="./register.html">SignUp</a></li>
+                </ul>
+            </header>
+            <div class="flexCatalog" id="flexCatalog">
+                <div class="filtres">
+                    <h3>Select Category:</h3>
+                    <div id="categorySel">
+                        <label class="control-checkbox" id="Allcontrol">All
+                            <input type="checkbox" id="AllCategory" checked="checked"/>
+                        </label>
+                        <label class="control-checkbox" id="defencecontrol">Defence
+                            <input type="checkbox" class="checkCategory" id="defence" checked="checked" disabled="disabled">
+                        </label>
+                        <label class="control-checkbox" id="binocularscontrol">Binoculars
+                            <input type="checkbox" class="checkCategory defence" id="binoculars" checked="checked" disabled="disabled">
+                        </label>
+                        <label class="control-checkbox" id="jammerscontrol">Jammers
+                            <input type="checkbox" class="checkCategory defence" id="jammers" checked="checked" disabled="disabled">
+                        </label>
+                        <label class="control-checkbox" id="laserscontrol">Lasers
+                            <input type="checkbox" class="checkCategory defence" id="laser" checked="checked" disabled="disabled">
+                        </label>
+                        <label class="control-checkbox" id="signalingcontrol">Signaling
+                            <input type="checkbox" class="checkCategory defence" id="signaling" checked="checked" disabled="disabled">
+                        </label>
+                        <label class="control-checkbox" id="bodycontrol">Augmentations
+                            <input type="checkbox" class="checkCategory" id="body" checked="checked" disabled="disabled">
+                        </label>
+                        <label class="control-checkbox" id="armscontrol">Arms
+                            <input type="checkbox" class="checkCategory Augmentations" id="arms" checked="checked" disabled="disabled">
+                        </label>
+                        <label class="control-checkbox" id="eyescontrol">Eyes
+                            <input type="checkbox" class="checkCategory Augmentations" id="eyes" checked="checked" disabled="disabled">
+                        </label>
+                        <label class="control-checkbox" id="heartscontrol">Hearts
+                            <input type="checkbox" class="checkCategory Augmentations" id="hearts" checked="checked" disabled="disabled">
+                        </label>
+                        <label class="control-checkbox" id="legscontrol">Legs
+                            <input type="checkbox" class="checkCategory Augmentations" id="legs" checked="checked" disabled="disabled">
+                        </label>
+                        <label class="control-checkbox" id="dogscontrol">Dogs
+                            <input type="checkbox" class="checkCategory" id="dogs" checked="checked" disabled="disabled">
+                        </label>
+                        <label class="control-checkbox" id="toolscontrol">Tools
+                            <input type="checkbox" class="checkCategory" id="tools" checked="checked" disabled="disabled">
+                        </label>
+                    </div>
+                    <h3>Select Country:</h3>
+                    <div id="countrySel">
+                        <label class="control-checkbox" id="AllcountryControl">All
+                            <input type="checkbox" id="Allcountry" checked>
+                        </label>
+                        <label class="control-checkbox" id="ChinaControl">China
+                            <input type="checkbox" class="checkCountry" id="China" checked="checked" disabled="disabled">
+                        </label>
+                        <label class="control-checkbox" id="GermanyControl">Germany
+                            <input type="checkbox" class="checkCountry" id="Germany" checked="checked" disabled="disabled">
+                        </label>
+                        <label class="control-checkbox" id="JapanControl">Japan
+                            <input type="checkbox" class="checkCountry" id="Japan" checked="checked" disabled="disabled">
+                        </label>
+                    </div>
+                    <h3>Price:</h3>
+                    <div id="PriceSel">
+                        From <input type="text" placeholder="min" value="0" pattern="\d+(\.\d{2})?" required>$ to <input type="text" placeholder="min" value="4999.99" pattern="\d+(\.\d{2})?" required>$
+                    </div>
+                    <label class="control-checkbox" id="SalesControl">On Sales
+                        <input type="checkbox" id="Sales" checked>
+                    </label>
+                    <div class="btns">
+                        <div class="btnFiltr" id="resetBtn"><h3>Reset</h3></div>
+                        <div class="btnFiltr" id="confirmBtn"><h3>Confirm</h3></div>
+                    </div>
+                    
+                </div>
+                <div class="liCatalog">
+                    <ul id="catalog"></ul>
+                </div>
+            </div>
+    </div>
+
+
+    <script src="fontawesome/js/all.js"></script>
+</body>
+</html>
