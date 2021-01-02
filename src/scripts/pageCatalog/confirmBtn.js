@@ -4,17 +4,17 @@ import addToBranch from "./addToBranch";
 import inpytVal from "../loadPages/inputsValidity";
 
 export default function confirmBtn() {
-  confirm.onclick = function () {
+  document.getElementById("confirmBtn").onclick = function () {
     let l = 0;
     let k = 0;
     let checks = document.getElementsByClassName("checkCategory");
-    for (check of checks) {
+    for (let check of checks) {
       if (check.checked == true) {
         l++;
       }
     }
     let checks2 = document.getElementsByClassName("checkCountry");
-    for (check of checks2) {
+    for (let check of checks2) {
       if (check.checked == true) {
         k++;
       }
@@ -29,7 +29,7 @@ export default function confirmBtn() {
       var request = new XMLHttpRequest();
       request.open("GET", "http://localhost:3000/goods", false);
       request.send();
-      var status = request.status;
+      let status = request.status;
       if (status == 200) {
         let responseObj = new Map(JSON.parse(request.response));
         let ul = document.getElementById("catalog");

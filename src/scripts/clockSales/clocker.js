@@ -2,7 +2,7 @@ import getTimeRemaining from "./timeRest.js";
 
 export default function initializeClock(elem, endtime) {
   let timeinterval = setInterval(function () {
-    let = getTimeRemaining(endtime);
+    let t = getTimeRemaining(endtime);
     if (t.total > 0) {
       elem.children[
         elem.children.length - 1

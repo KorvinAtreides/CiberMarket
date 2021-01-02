@@ -9,7 +9,7 @@ export default function cabinet() {
   let status = request.status;
   if (status == 200) {
     let responseObj = new Map(JSON.parse(request.response));
-    let ul = document.getElementById("catalog");
+    let ul = document.getElementById("branchUls");
     let mapGoods;
     if (localStorage.getItem("goodsInBranch") != undefined) {
       mapGoods = new Map(JSON.parse(localStorage.getItem("goodsInBranch")));

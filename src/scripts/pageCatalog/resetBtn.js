@@ -1,14 +1,14 @@
 export default function resetBtn() {
-  resetBtn.addEventListener("click", function () {
+  document.getElementById("resetBtn").addEventListener("click", function () {
     AllCategory.checked = true;
     let checks = document.getElementsByClassName("checkCategory");
-    for (check of checks) {
+    for (let check of checks) {
       check.checked = true;
       check.setAttribute("disabled", "disabled");
     }
     document.getElementById("Allcountry").checked = true;
     let checks2 = document.getElementsByClassName("checkCountry");
-    for (check of checks2) {
+    for (let check of checks2) {
       check.checked = true;
     }
     document.getElementById("Sales").checked = true;
