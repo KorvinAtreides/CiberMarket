@@ -1,10 +1,14 @@
-import initializeClock from "./clockSales/clocker.js";
+import initializeClock from "../clockSales/clocker.js";
+import clickArrow from "../pageCatalog/counterArrows";
+import inputsValidity from "../loadPages/inputsValidity";
+import updateBranch from "./updateBranch";
+import removeFromBranch from "./removeFromBranch";
 
-if (document.getElementById("branchUl") !== null) {
-  var request = new XMLHttpRequest();
+export default function branch() {
+  let request = new XMLHttpRequest();
   request.open("GET", "http://localhost:3000/goods", false);
   request.send();
-  var status = request.status;
+  let status = request.status;
   if (status == 200) {
     let responseObj = new Map(JSON.parse(request.response));
     let ul = document.getElementById("branchUl");
@@ -34,8 +38,8 @@ if (document.getElementById("branchUl") !== null) {
                     <div class="divSale" id="divSale${id}">
                     </div>
                 </div>`;
-        inpytVal();
-        removeBranch(`btnBranch${responseObj.get(String(id)).id}`); //кнопка удаления из корзины
+        inputsValidity();
+        removeFromBranch(`btnBranch${responseObj.get(String(id)).id}`); //кнопка удаления из корзины
         if (responseObj.get(String(id)).sales != "No") {
           document.getElementById(
             `divSale${id}`
@@ -47,6 +51,7 @@ if (document.getElementById("branchUl") !== null) {
         }
       } //распродажа
       clickArrow();
+      updateBranch();
     }
     if (ul.innerHTML == "") {
       ul.innerHTML = `<div>
@@ -59,54 +64,4 @@ if (document.getElementById("branchUl") !== null) {
   } else {
     console.log(request.statusText);
   }
-}
-
-function clickArrow() {
-  //стрелки
-  let arrows = document.getElementsByClassName("arrow");
-  for (let arrow of arrows) {
-    arrow.addEventListener("click", function () {
-      if (arrow.classList.contains("arrLeft")) {
-        let val = arrow.nextElementSibling.value;
-        val--;
-        arrow.nextElementSibling.value = String(val); // уменьшают значение на 1
-        if (Number(arrow.nextElementSibling.value) <= 0) {
-          arrow.nextElementSibling.value = "1"; //но не менбше 0
-        }
-      } else {
-        let val = arrow.previousElementSibling.value;
-        val++;
-        arrow.previousElementSibling.value = String(val); //увеличивают на 1
-      }
-      let id = String(
-        arrow.parentElement.nextElementSibling.nextElementSibling
-          .nextElementSibling.id
-      );
-      let number = arrow.parentElement.children[1].value;
-      let mapGoods = new Map(JSON.parse(localStorage.getItem("goodsInBranch")));
-      mapGoods.delete(String(id)); //перезапись элементов в корзине
-      mapGoods.set(String(id), Number(number));
-      localStorage.setItem("goodsInBranch", JSON.stringify([...mapGoods]));
-      branchLabel();
-    });
-  }
-}
-function removeBranch(id) {
-  //кнопка хранит айди элемента на убирание
-  let elem = document.getElementById(String(id));
-  elem.addEventListener("click", function () {
-    mapGoods = new Map(JSON.parse(localStorage.getItem("goodsInBranch")));
-    mapGoods.delete(String(id)); //всё стирается
-    localStorage.setItem("goodsInBranch", JSON.stringify([...mapGoods]));
-    branchLabel();
-    elem.parentElement.parentElement.remove();
-    event.stopPropagation();
-    let ul = document.getElementById("branchUl");
-    if (ul.innerHTML == "") {
-      ul.innerHTML = `<div>
-                <h3>Sorry, the branch is empty</h3>
-                <h3>Please, add something in it</h3>
-            </div>`; //если ничего не осталось
-    }
-  });
 }
