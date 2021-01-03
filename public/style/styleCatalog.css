@@ -1,231 +1,124 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+@import url("./pre-styles.css");
+@import url("./header.css");
+
+.flexCatalog {
+  display: flex;
+  width: 100%;
 }
-i {font-style: italic;}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-    background-color:#030f3362 !important;
-    color: #000014;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+.flexCatalog .filtres {
+  width: 25%;
+  max-width: 350px;
+  background-color: #10033357;
+  position: fixed;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  font-size: 18px;
+  color: #000014;
 }
 
-/***************************/
-
-.wrapper{
-	max-width: 1366px;
-	width:100%;
-    margin: 0 auto;
+.flexCatalog .filtres #categorySel {
+  width: 80%;
+  background-color: #030f3300;
+  overflow: scroll;
+  height: 200px;
+}
+.flexCatalog h3 {
+  font-size: 24px;
+  color: #000014;
+  text-align: center;
+}
+.flexCatalog .filtres label {
+  display: block;
+  margin-left: 20px;
+}
+.flexCatalog .filtres #categorySel #defencecontrol,
+.flexCatalog .filtres #categorySel #bodycontrol,
+.flexCatalog .filtres #categorySel #dogscontrol,
+.flexCatalog .filtres #categorySel #toolscontrol {
+  margin-left: 10px;
+}
+.flexCatalog .filtres #categorySel #Allcontrol {
+  margin-left: 0px;
+}
+.flexCatalog .filtres #countrySel {
+  width: 80%;
+}
+.flexCatalog .filtres #countrySel #AllcountryControl {
+  margin-left: 0px;
 }
 
-header {
-    height: 100px;
-    width: 100%;
-    background-color: #1d033379;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.flexCatalog .filtres #PriceSel input {
+  width: 60px;
+  font-size: 16px;
+  background-color: #030f3300;
+  color: #000014;
 }
-header .logo img{
-    height: 60px;
-    position: relative;
-    top: -10px;
+.flexCatalog .filtres .btns {
+  display: flex;
 }
-header .logo {
-    display: flex;
-    align-items: center;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
-    text-decoration: none;
-    color: #000014;
-}
-header .logo h2{
-    font-size: 35px;
-    margin: 0px;
-    letter-spacing: 2px;
-}
-header .logo p{
-    font-size: 24px;
-    letter-spacing: 1px;
-    margin: 0px;
-    padding-bottom: 15px;
-}
-header .menu {    
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0px;
+.flexCatalog .filtres .btnFiltr,
+.btnBranch {
+  background-color: #1d033379;
+  padding: 5px 10px 5px 10px;
+  margin: 5px 10px;
 }
 
-header .menu li{
-    display: inline;
-    text-decoration: none;
-    padding: 12px 18px;
+.flexCatalog .liCatalog {
+  margin-left: 25%;
+  width: 75%;
 }
-header .menu li a {
-    text-decoration: none;
-    color: #000014;
-    font-size: 18px;
-    font-style: italic;
+.flexCatalog .liCatalog #catalog {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-header .menu li #numberItems{
-    width: 20px;
-    color: red;
-    text-align: center;
-    padding: 0px;
-    border: none;
+.flexCatalog .liCatalog #catalog li {
+  width: 30%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #10033357;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }
-header .menu li #search{
-    width: 160px;
-    font-size: 18px;
-    margin-right: 5px;
-    background-color: #030f3300;
-    color: #000014;
+.flexCatalog .liCatalog #catalog li img {
+  max-width: 100%;
 }
-.flexCatalog{
-    display: flex;
-    width: 100%;
+.flexCatalog .liCatalog #catalog li .counter {
+  margin: 5px 0px;
+  display: flex;
+  justify-content: center;
 }
-.flexCatalog .filtres{
-    width: 25%;
-    max-width: 350px;
-    background-color: #10033357;
-    position: fixed;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-    font-size: 18px;
-    color: #000014;
+.flexCatalog .liCatalog #catalog li input {
+  width: 40px;
+  font-size: 16px;
+  background-color: #030f3300;
+  color: #000014;
+  text-align: center;
 }
-
-.flexCatalog .filtres #categorySel{
-width: 80%;
-background-color: #030f3300;
-overflow: scroll;
-height: 200px;
-}
-.flexCatalog h3{
-    font-size: 24px;
-    color: #000014;
-    text-align: center;
-}
-.flexCatalog .filtres label{
-    display: block;
-    margin-left: 20px;
-}
-.flexCatalog .filtres #categorySel #defencecontrol, .flexCatalog .filtres #categorySel #bodycontrol, .flexCatalog .filtres #categorySel #dogscontrol, .flexCatalog .filtres #categorySel #toolscontrol{
-    margin-left: 10px;
-}
-.flexCatalog .filtres #categorySel #Allcontrol{    margin-left: 0px;}
-.flexCatalog .filtres #countrySel{  width: 80%;}
-.flexCatalog .filtres #countrySel #AllcountryControl{   margin-left: 0px;}
-
-.flexCatalog .filtres #PriceSel input{
-    width: 60px;
-    font-size: 16px;
-    background-color: #030f3300;
-    color: #000014;
-}
-.flexCatalog .filtres .btns{
-    display: flex;
-}
-.flexCatalog .filtres .btnFiltr, .btnBranch{
-    background-color: #1d033379;
-    padding: 5px 10px 5px 10px;
-    margin: 5px 10px;
-}
-
-.flexCatalog .liCatalog{
-    margin-left: 25%;
-    width: 75%;
-}
-.flexCatalog .liCatalog #catalog{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.flexCatalog .liCatalog #catalog li{
-    width: 30%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #10033357;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-}
-.flexCatalog .liCatalog #catalog li img{
-    max-width: 100%;
-}
-.flexCatalog .liCatalog #catalog li .counter{
-    margin: 5px 0px;
-    display: flex;
-    justify-content: center;
-}
-.flexCatalog .liCatalog #catalog li input{
-    width: 40px;
-    font-size: 16px;
-    background-color: #030f3300;
-    color: #000014;
-    text-align: center;
-}
-.arrow{
-    margin: 0px 10px;
-    position: relative;
-    z-index: 3;
-    border: 2px solid black;
-    padding: 5px;
+.arrow {
+  margin: 0px 10px;
+  position: relative;
+  z-index: 3;
+  border: 2px solid black;
+  padding: 5px;
 }
 .divSale {
-    position: absolute;
-    top: 80px;
-    font-weight: 800;
-    font-size: 24px;
-    text-align: center;
-    color: red;
+  position: absolute;
+  top: 80px;
+  font-weight: 800;
+  font-size: 24px;
+  text-align: center;
+  color: red;
 }
-.divSale h3{
-    font-size: 28px;
-    text-align: center;
-    color: red;
-    font-weight: 800;
+.divSale h3 {
+  font-size: 28px;
+  text-align: center;
+  color: red;
+  font-weight: 800;
 }

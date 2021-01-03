@@ -20,4 +20,8 @@ sudo npm install -g json-server
 Terminal command to start json-server:
 json-server --watch db.json
 
-The database is acceptable on http://localhost:3000/.
+The resources of database is acceptable on http://localhost:3000/.
+
+http://localhost:3000/users
+
+http://localhost:3000/goods

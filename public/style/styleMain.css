@@ -1,231 +1,130 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-i {font-style: italic;}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-    background-color:#030f3362 !important;
-    color: #000014;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+@import url("./pre-styles.css");
+@import url("./header.css");
 
-/***************************/
-
-.wrapper{
-	max-width: 1366px;
-	width:100%;
-    margin: 0 auto;
-}
-
-header {
-    height: 100px;
-    width: 100%;
-    background-color: #1d033379;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-header .logo img{
-    height: 60px;
-    position: relative;
-    top: -10px;
-}
-header .logo {
-    display: flex;
-    align-items: center;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
-    text-decoration: none;
-    color: #000014;
-}
-header .logo h2{
-    font-size: 35px;
-    margin: 0px;
-    letter-spacing: 2px;
-}
-header .logo p{
-    font-size: 24px;
-    letter-spacing: 1px;
-    margin: 0px;
-    padding-bottom: 15px;
-}
-header .menu {    
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0px;
-}
-
-header .menu li{
-    display: inline;
-    text-decoration: none;
-    padding: 12px 18px;
-}
-header .menu li a {
-    text-decoration: none;
-    color: #000014;
-    font-size: 18px;
-    font-style: italic;
-}
-header .menu li #numberItems{
-    width: 20px;
-    color: red;
-    text-align: center;
-    padding: 0px;
-    border: none;
-}
-header .menu li #search{
-    width: 160px;
-    font-size: 18px;
-    margin-right: 5px;
-    background-color: #030f3300;
-    color: #000014;
-}
 .container1 {
-    display: flex;
+  display: flex;
 }
-.container1 .caryselDiv{
-    max-width: 60%;
-    width: 600px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    margin-bottom: 30px;
+.container1 .caryselDiv {
+  max-width: 60%;
+  width: 600px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
-.container1 .caryselDiv .carysel {max-width: 520px;}
-.container1 .caryselDiv img{
-    position: relative;
-    max-width:100%;
-    height: 300px;
-    z-index: 2;
+.container1 .caryselDiv .carysel {
+  max-width: 520px;
 }
-.container1 .caryselDiv .arrow{
-    position: relative;
-    z-index: 3;
-    border: 2px solid black;
-    padding: 5px;
+.container1 .caryselDiv img {
+  position: relative;
+  max-width: 100%;
+  height: 300px;
+  z-index: 2;
 }
-.container1 .caryselDiv #arrLeft{left: 5px;}
-.container1 .caryselDiv #arrRight{left: -5px;}
-.container1 .active,.container2 .active {display: inline-block;}
-.container1 .notActive,.container2 .notActive {display: none;}
-.container1 #circles{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: -30px;
-    z-index: 3;
+.container1 .caryselDiv .arrow {
+  position: relative;
+  z-index: 3;
+  border: 2px solid black;
+  padding: 5px;
 }
-.container1 #circles span{margin: 2px;}
-.container1 .textCarysel{
-    max-width: 40%;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.container1 .caryselDiv #arrLeft {
+  left: 5px;
 }
-.container1 .textCarysel h3{
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 10px;
+.container1 .caryselDiv #arrRight {
+  left: -5px;
 }
-.container1 .textCarysel p{
-    font-size: 18px;
-    margin-bottom: 10px;
-    margin-left: 3px;
+.container1 .active,
+.container2 .active {
+  display: inline-block;
 }
-.container2{
-    text-align: center;
-    padding-top: 30px;
-    background-color: #10033357;
+.container1 .notActive,
+.container2 .notActive {
+  display: none;
 }
-.container2 h2{
-    font-size: 30px;
-    font-weight: 700;
-    letter-spacing: 2px;
+.container1 #circles {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -30px;
+  z-index: 3;
 }
-.container2 #caryselDiv2{
-    margin-left: 5%;
-    max-width: 90%;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.container1 #circles span {
+  margin: 2px;
+}
+.container1 .textCarysel {
+  max-width: 40%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container1 .textCarysel h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.container1 .textCarysel p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-left: 3px;
+}
+.container2 {
+  text-align: center;
+  padding-top: 30px;
+  background-color: #10033357;
+}
+.container2 h2 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.container2 #caryselDiv2 {
+  margin-left: 5%;
+  max-width: 90%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .container2 #caryselDiv2 .carysel {
-    max-width: 90%;
-     display: flex;
-     height: 100%;
-     align-items: center;
-     justify-content: space-between;
+  max-width: 90%;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
-.container2 #caryselDiv2 li{width: 22%;}
-.container2 #caryselDiv2 img{
-    width:100%;
+.container2 #caryselDiv2 li {
+  width: 22%;
 }
-.container2 #caryselDiv2 .arrow{
-    border: 2px solid black;
-    padding: 5px;
+.container2 #caryselDiv2 img {
+  width: 100%;
+}
+.container2 #caryselDiv2 .arrow {
+  border: 2px solid black;
+  padding: 5px;
 }
 .container3 {
-    padding-top: 20px;
-    display: flex;
-    margin-left: 2.5%;
-    width: 95%;
-    justify-content: space-between;
-    padding-bottom: 20px;
+  padding-top: 20px;
+  display: flex;
+  margin-left: 2.5%;
+  width: 95%;
+  justify-content: space-between;
+  padding-bottom: 20px;
 }
-.container3 .col3{
-    width: 30%;
+.container3 .col3 {
+  width: 30%;
 }
-.container3 .col3 h3{
-    text-align: center;
-    font-size: 22px;
-    margin-bottom: 10px;
+.container3 .col3 h3 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 10px;
 }
-.container3 .col3 p{
-    font-size: 16px;
-    margin-bottom: 10px;
-    margin-left: 3px;
+.container3 .col3 p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-left: 3px;
 }
