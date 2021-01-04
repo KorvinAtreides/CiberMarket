@@ -1,12 +1,10 @@
 import initializeClock from "../clockSales/clocker.js";
+import getRequest from "../server/getRequest.js";
 
 export default function picturesCarousel() {
-  let request = new XMLHttpRequest();
-  request.open("GET", "http://localhost:3000/goods", false);
-  request.send();
-  let status = request.status;
-  if (status == 200) {
-    let responseObj = new Map(JSON.parse(request.response));
+  let request = getRequest("goods");
+  if (request.status == 200) {
+    let responseObj = new Map(JSON.parse(request.object));
     let len1 = carysel1.children.length;
     let first = ["23", "26", "13", "47", "37", "2", "4"];
     //айди самых красивых или популярных элементов для главной карусели
@@ -32,9 +30,9 @@ export default function picturesCarousel() {
       }.png"</img><div></div>`;
       initializeClock(carysel2.children[i], responseObj.get(endtime[i]).sales);
     }
-  } else if (status == 404) {
+  } else if (request.status == 404) {
     console.log("Ресурс не найден");
   } else {
-    console.log(request.statusText);
+    console.log(String(request.status));
   }
 }

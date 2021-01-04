@@ -1,14 +1,12 @@
 import initializeClock from "../clockSales/clocker.js";
 import clickArrow from "./counterArrows";
 import addToBranch from "./addToBranch";
+import getRequest from "../server/getRequest.js";
 
 export default function catalog() {
-  let request = new XMLHttpRequest();
-  request.open("GET", "http://localhost:3000/goods", false);
-  request.send();
-  let status = request.status;
-  if (status == 200) {
-    let responseObj = new Map(JSON.parse(request.response));
+  let request = getRequest("goods");
+  if (request.status == 200) {
+    let responseObj = new Map(JSON.parse(request.object));
     for (let i = 0; i < responseObj.size; i += 4) {
       //загрузка каталога
       let li = document.createElement("li"); //со случайно выбранными элементами
@@ -50,9 +48,9 @@ export default function catalog() {
       }
     }
     clickArrow();
-  } else if (status == 404) {
+  } else if (request.status == 404) {
     console.log("Ресурс не найден");
   } else {
-    console.log(request.statusText);
+    console.log(String(request.status));
   }
 }

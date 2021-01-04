@@ -2,15 +2,13 @@ import initializeClock from "../clockSales/clocker.js";
 import stars from "./stars.js";
 import addBranch from "./addBranch";
 import clickArrow from "./clickArrow";
+import getRequest from "../server/getRequest.js";
 
 export default function pageProduct() {
-  let request = new XMLHttpRequest();
-  request.open("GET", "http://localhost:3000/goods", false);
-  request.send();
-  let status = request.status; //запрос на сервер
-  if (status == 200) {
+  let request = getRequest("goods");
+  if (request.status == 200) {
     let name = localStorage.getItem("currentItem");
-    let responseObj = new Map(JSON.parse(request.response));
+    let responseObj = new Map(JSON.parse(request.object));
     for (let [key, value] of responseObj) {
       if (value.name == name) {
         //вся инфа по найденному элементу
@@ -56,9 +54,9 @@ export default function pageProduct() {
         }
       }
     }
-  } else if (status == 404) {
+  } else if (request.status == 404) {
     console.log("Ресурс не найден");
   } else {
-    console.log(request.statusText);
+    console.log(String(request.status));
   }
 }

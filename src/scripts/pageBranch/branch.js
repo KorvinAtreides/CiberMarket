@@ -3,14 +3,12 @@ import clickArrow from "../pageCatalog/counterArrows";
 import inputsValidity from "../loadPages/inputsValidity";
 import updateBranch from "./updateBranch";
 import removeFromBranch from "./removeFromBranch";
+import getRequest from "../server/getRequest.js";
 
 export default function branch() {
-  let request = new XMLHttpRequest();
-  request.open("GET", "http://localhost:3000/goods", false);
-  request.send();
-  let status = request.status;
-  if (status == 200) {
-    let responseObj = new Map(JSON.parse(request.response));
+  let request = getRequest("goods");
+  if (request.status == 200) {
+    let responseObj = new Map(JSON.parse(request.object));
     let ul = document.getElementById("branchUl");
     let mapGoods;
     if (localStorage.getItem("goodsInBranch") != undefined) {
@@ -59,9 +57,9 @@ export default function branch() {
                 <h3>Please, add something in it</h3>
             </div>`; //если ничего нет
     }
-  } else if (status == 404) {
+  } else if (request.status == 404) {
     console.log("Ресурс не найден");
   } else {
-    console.log(request.statusText);
+    console.log(String(request.status));
   }
 }

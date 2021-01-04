@@ -2,6 +2,8 @@ import initializeClock from "../clockSales/clocker.js";
 import clickArrow from "./counterArrows";
 import addToBranch from "./addToBranch";
 import inpytVal from "../loadPages/inputsValidity";
+import getRequest from "../server/getRequest.js";
+import toPageProduct from "../loadPages/toPageProduct.js";
 
 export default function confirmBtn() {
   document.getElementById("confirmBtn").onclick = function () {
@@ -26,12 +28,9 @@ export default function confirmBtn() {
     } else if (priceMina >= priceMaxa) {
       alert("You have to choose price filter correctly");
     } else {
-      var request = new XMLHttpRequest();
-      request.open("GET", "http://localhost:3000/goods", false);
-      request.send();
-      let status = request.status;
-      if (status == 200) {
-        let responseObj = new Map(JSON.parse(request.response));
+      let request = getRequest("goods");
+      if (request.status == 200) {
+        let responseObj = new Map(JSON.parse(request.object));
         let ul = document.getElementById("catalog");
         ul.innerHTML = "";
         for (let i = 0; i < responseObj.size; i++) {
@@ -99,10 +98,11 @@ export default function confirmBtn() {
                       </div>`;
         }
         clickArrow();
-      } else if (status == 404) {
+        toPageProduct();
+      } else if (request.status == 404) {
         console.log("Ресурс не найден");
       } else {
-        console.log(request.statusText);
+        console.log(String(request.status));
       }
     }
   };

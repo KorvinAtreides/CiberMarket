@@ -1,19 +1,18 @@
+import getRequest from "../server/getRequest";
+
 export default function toPageProduct() {
   let images = document.querySelectorAll("img"); // для всех картинок кроме лого
   for (let image of images) {
     if (image.alt != "logo") {
-      image.addEventListener("click", function () {
+      image.onclick = function () {
         //кликер перехода и считывание имени картинки
         let name = String(image.src).slice(
           String(image.src).lastIndexOf("/") + 1,
           -4
         );
-        let request = new XMLHttpRequest();
-        request.open("GET", "http://localhost:3000/goods", false);
-        request.send();
-        let status = request.status;
-        if (status == 200) {
-          let responseObj = new Map(JSON.parse(request.response));
+        let request = getRequest("goods");
+        if (request.status == 200) {
+          let responseObj = new Map(JSON.parse(request.object));
           for (let [key, value] of responseObj) {
             if (value.name == name) {
               localStorage.removeItem("currentItem");
@@ -21,12 +20,12 @@ export default function toPageProduct() {
               document.location.href = "./pageProduct.html";
             }
           }
-        } else if (status == 404) {
+        } else if (request.status == 404) {
           console.log("Ресурс не найден");
         } else {
-          console.log(request.statusText);
+          console.log(String(request.status));
         }
-      });
+      };
     }
   }
 }

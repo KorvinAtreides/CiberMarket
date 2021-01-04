@@ -1,18 +1,16 @@
 import initializeClock from "../clockSales/clocker.js";
 import clickArrow from "./counterArrows";
 import inpytVal from "../loadPages/inputsValidity";
+import getRequest from "../server/getRequest.js";
 
 export default function searching() {
   if (
     document.getElementById("catalog") !== null &&
     localStorage.getItem("searchItem") !== null
   ) {
-    let request = new XMLHttpRequest();
-    request.open("GET", "http://localhost:3000/goods", false);
-    request.send();
-    let status = request.status;
-    if (status == 200) {
-      let responseObj = new Map(JSON.parse(request.response));
+    let request = getRequest("goods");
+    if (request.status == 200) {
+      let responseObj = new Map(JSON.parse(request.object));
       let ul = document.getElementById("catalog");
       ul.innerHTML = "";
       let search = localStorage.getItem("searchItem");
@@ -61,10 +59,10 @@ export default function searching() {
         inpytVal();
         clickArrow();
       } //и проверка на валидность
-    } else if (status == 404) {
+    } else if (request.status == 404) {
       console.log("Ресурс не найден");
     } else {
-      console.log(request.statusText);
+      console.log(String(request.status));
     }
   }
 }

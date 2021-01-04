@@ -1,14 +1,12 @@
 import initializeClock from "../clockSales/clocker.js";
 import sum from "./sum";
 import removeFromBranch from "../pageBranch/removeFromBranch";
+import getRequest from "../server/getRequest.js";
 
 export default function cabinet() {
-  let request = new XMLHttpRequest();
-  request.open("GET", "http://localhost:3000/goods", false);
-  request.send();
-  let status = request.status;
-  if (status == 200) {
-    let responseObj = new Map(JSON.parse(request.response));
+  let request = getRequest("goods");
+  if (request.status == 200) {
+    let responseObj = new Map(JSON.parse(request.object));
     let ul = document.getElementById("branchUls");
     let mapGoods;
     if (localStorage.getItem("goodsInBranch") != undefined) {
@@ -53,9 +51,9 @@ export default function cabinet() {
                 <h3>Please, add something in it</h3>
             </div>`;
     }
-  } else if (status == 404) {
+  } else if (request.status == 404) {
     console.log("Ресурс не найден");
   } else {
-    console.log(request.statusText);
+    console.log(String(request.status));
   }
 }

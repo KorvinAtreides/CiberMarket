@@ -8,7 +8,7 @@ export default function loadUser() {
           "currentUser"
         )}!<br><a href="./personalCabinet.html">Personal Cabinet</a> <br> <a id="logOut">LogOut</a></li>`;
       logOut.addEventListener("click", function () {
-        localStorage.removeItem("currentUser"); //обнуление корзины и юзера
+        localStorage.removeItem("currentUser");
         localStorage.removeItem("goodsInBranch");
         document.location.reload();
       });
