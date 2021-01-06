@@ -1,0 +1,33 @@
+.flexbox {
+  background-color: #1d033379;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.flexbox .flexUl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.flexbox ul li {
+  margin-top: 10px;
+}
+.flexbox li a {
+  color: #000014;
+  font-size: large;
+}
+.socialMedia {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000014;
+  border-radius: 100px;
+  margin-right: 9px;
+  text-align: center;
+}
+.socialMedia svg {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #000014;
+}

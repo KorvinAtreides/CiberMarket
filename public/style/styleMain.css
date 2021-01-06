@@ -1,5 +1,6 @@
 @import url("./pre-styles.css");
 @import url("./header.css");
+@import url("./footer.css");
 
 .container1 {
   display: flex;
