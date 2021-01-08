@@ -1,6 +1,7 @@
 import initializeClock from "../clockSales/clocker.js";
 import clickArrow from "./counterArrows";
 import inpytVal from "../loadPages/inputsValidity";
+import addToBranch from "./addToBranch";
 import getRequest from "../server/getRequest.js";
 
 export default function searching() {
@@ -12,8 +13,11 @@ export default function searching() {
     if (request.status == 200) {
       let responseObj = new Map(JSON.parse(request.object));
       let ul = document.getElementById("catalog");
-      ul.innerHTML = "";
       let search = localStorage.getItem("searchItem");
+      let h3 = document.createElement("h3");
+      h3.innerHTML = `Results of the query "${search}":`;
+      ul.parentElement.insertBefore(h3, ul);
+      ul.innerHTML = ``;
       localStorage.removeItem("searchItem");
       for (let [key, value] of responseObj) {
         //если есть совпадение - отрисовка
