@@ -28,7 +28,7 @@ export default function catalog() {
                   responseObj.get(String(i + 1)).price
                 }$</h3>
                 <h3>Made in ${responseObj.get(String(i + 1)).country}</h3>
-                <div class="btnBranch" id="btnBranch${
+                <div class="btn" id="btnBranch${
                   responseObj.get(String(i + 1)).id
                 }">
                 <h3>Add into Branch</h3>

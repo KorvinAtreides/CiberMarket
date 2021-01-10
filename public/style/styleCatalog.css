@@ -1,5 +1,6 @@
 @import url("./pre-styles.css");
 @import url("./header.css");
+@import url("./buttonsStyles.css");
 
 .flexCatalog {
   display: flex;
@@ -24,11 +25,6 @@
   background-color: #030f3300;
   overflow: scroll;
   height: 200px;
-}
-.flexCatalog h3 {
-  font-size: 24px;
-  color: #000014;
-  text-align: center;
 }
 .flexCatalog .filtres label {
   display: block;
@@ -58,12 +54,6 @@
 }
 .flexCatalog .filtres .btns {
   display: flex;
-}
-.flexCatalog .filtres .btnFiltr,
-.btnBranch {
-  background-color: #1d033379;
-  padding: 5px 10px 5px 10px;
-  margin: 5px 10px;
 }
 
 .flexCatalog .liCatalog {

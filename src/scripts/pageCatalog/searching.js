@@ -34,7 +34,7 @@ export default function searching() {
                       </div>
                       <h3>Price per one item: ${value.price}$</h3>
                       <h3>Made in ${value.country}</h3>
-                      <div class="btnBranch" id="btnBranch${value.id}">
+                      <div class="btn" id="btnBranch${value.id}">
                           <h3>Add into Branch</h3>
                       </div>
                       <div class="divSale" id="divSale${value.id}">

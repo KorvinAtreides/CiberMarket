@@ -24,7 +24,7 @@ export default function cabinet() {
                     </div>
                     <h3>Price per one item: ${responseObj.get(id).price}$</h3>
                     <h3>Made in ${responseObj.get(String(id)).country}</h3>
-                    <div class="btnBranch" id="btnBranch${
+                    <div class="btn" id="btnBranch${
                       responseObj.get(String(id)).id
                     }">
                     <h3>Remove from Branch</h3>
