@@ -91,13 +91,6 @@
   color: #000014;
   text-align: center;
 }
-.arrow {
-  margin: 0px 10px;
-  position: relative;
-  z-index: 3;
-  border: 2px solid black;
-  padding: 5px;
-}
 .divSale {
   position: absolute;
   top: 80px;

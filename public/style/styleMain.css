@@ -1,6 +1,7 @@
 @import url("./pre-styles.css");
 @import url("./header.css");
 @import url("./footer.css");
+@import url("./buttonsStyles.css");
 
 .container1 {
   display: flex;
@@ -26,10 +27,7 @@
   z-index: 2;
 }
 .container1 .caryselDiv .arrow {
-  position: relative;
-  z-index: 3;
-  border: 2px solid black;
-  padding: 5px;
+  margin: 0px;
 }
 .container1 .caryselDiv #arrLeft {
   left: 5px;
@@ -105,8 +103,8 @@
   width: 100%;
 }
 .container2 #caryselDiv2 .arrow {
-  border: 2px solid black;
-  padding: 5px;
+  margin: 0px;
+  position: initial;
 }
 .container3 {
   padding-top: 20px;

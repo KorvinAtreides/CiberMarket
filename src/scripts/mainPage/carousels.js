@@ -3,7 +3,7 @@ export default function carousels() {
   caryselDiv1.innerHTML += `<div id="circles"></div>`;
   for (let i = 0; i < len; i++) {
     //запись кружков для отображения
-    circles.innerHTML += `<span id="spanCircle${i}"><i class="fas fa-circle"></i></span>`;
+    circles.innerHTML += `<span class="spanCircle" id="spanCircle${i}"><i class="fas fa-circle"></i></span>`;
   }
   for (let circle of circles.children) {
     circle.addEventListener("click", function () {
