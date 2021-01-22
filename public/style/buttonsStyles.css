@@ -13,20 +13,27 @@ h3 {
   position: relative;
   z-index: 3;
   border: 2px solid black;
-  padding: 5px;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.arrow svg {
+  padding: 5px;
+}
 .btn :hover,
-.spanCircle :hover,
 .arrow :hover,
 .socialMedia :hover {
   background-color: #10033357;
 }
 .btn :active,
-.spanCircle :active,
 .arrow :active,
 .socialMedia :active {
   background-color: #ff000057;
+}
+.spanCircle svg:hover {
+  color: #10033357;
+}
+.spanCircle svg :active {
+  color: #ff000057;
 }
