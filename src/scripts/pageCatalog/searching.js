@@ -1,5 +1,4 @@
 import initializeClock from "../clockSales/clocker.js";
-import clickArrow from "./counterArrows";
 import inpytVal from "../loadPages/inputsValidity";
 import addToBranch from "./addToBranch";
 import getRequest from "../server/getRequest.js";
@@ -61,7 +60,6 @@ export default function searching() {
       } else {
         //если есть что-то то вызываются листенеры на стрелочки
         inpytVal();
-        clickArrow();
       } //и проверка на валидность
     } else if (request.status == 404) {
       console.log("Ресурс не найден");

@@ -1,7 +1,13 @@
-export default function clickArrow1() {
-  let arrows = document.getElementsByClassName("arrow");
-  for (let arrow of arrows) {
-    arrow.onclick = function () {
+export default function clickArrowOnCatalog() {
+  let catalog = document.getElementById("catalog");
+  catalog.addEventListener("click", function (event) {
+    let arrow;
+    if (event.target.parentNode.classList.contains("arrow")) {
+      arrow = event.target.parentNode;
+    } else if (event.target.parentNode.parentNode.classList.contains("arrow")) {
+      arrow = event.target.parentNode.parentNode;
+    }
+    if (arrow != undefined) {
       if (arrow.classList.contains("arrLeft")) {
         let val = arrow.nextElementSibling.value;
         val--;
@@ -14,6 +20,6 @@ export default function clickArrow1() {
         val++;
         arrow.previousElementSibling.value = String(val);
       }
-    };
-  }
+    }
+  });
 }

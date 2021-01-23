@@ -1,5 +1,4 @@
 import initializeClock from "../clockSales/clocker.js";
-import clickArrow from "../pageCatalog/counterArrows";
 import inputsValidity from "../loadPages/inputsValidity";
 import updateBranch from "./updateBranch";
 import removeFromBranch from "./removeFromBranch";
@@ -48,7 +47,6 @@ export default function branch() {
           );
         }
       } //распродажа
-      clickArrow();
       updateBranch();
     }
     if (ul.innerHTML == "") {

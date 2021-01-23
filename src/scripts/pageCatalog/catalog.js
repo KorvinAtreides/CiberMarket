@@ -1,5 +1,4 @@
 import initializeClock from "../clockSales/clocker.js";
-import clickArrow from "./counterArrows";
 import addToBranch from "./addToBranch";
 import getRequest from "../server/getRequest.js";
 
@@ -47,7 +46,6 @@ export default function catalog() {
         );
       }
     }
-    clickArrow();
   } else if (request.status == 404) {
     console.log("Ресурс не найден");
   } else {

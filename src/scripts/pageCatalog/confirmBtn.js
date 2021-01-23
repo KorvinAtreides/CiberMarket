@@ -1,5 +1,4 @@
 import initializeClock from "../clockSales/clocker.js";
-import clickArrow from "./counterArrows";
 import addToBranch from "./addToBranch";
 import inpytVal from "../loadPages/inputsValidity";
 import getRequest from "../server/getRequest.js";
@@ -97,7 +96,6 @@ export default function confirmBtn() {
                           <h3>Please, make another try</h3>
                       </div>`;
         }
-        clickArrow();
         toPageProduct();
       } else if (request.status == 404) {
         console.log("Ресурс не найден");

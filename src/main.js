@@ -5,6 +5,7 @@ import catalog from "./scripts/pageCatalog/catalog";
 import searching from "./scripts/pageCatalog/searching";
 import resetBtn from "./scripts/pageCatalog/resetBtn";
 import confirmBtn from "./scripts/pageCatalog/confirmBtn";
+import clickArrowOnCatalog from "./scripts/pageCatalog/clickArrowOnCatalog";
 import loadYandexMap from "./scripts/pageCompany/map";
 import branch from "./scripts/pageBranch/branch";
 import cabinet from "./scripts/pageCabinet/cabinet";
@@ -31,6 +32,7 @@ if (document.title == "Product Catalog") {
   confirmBtn();
   resetBtn();
   searching();
+  clickArrowOnCatalog();
 }
 if (document.title == "Branch") {
   branch();
