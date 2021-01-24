@@ -1,8 +1,8 @@
-import initializeClock from "../clockSales/clocker.js";
 import addToBranch from "./addToBranch";
 import inpytVal from "../loadPages/inputsValidity";
 import getRequest from "../server/getRequest.js";
 import toPageProduct from "../loadPages/toPageProduct.js";
+import salesLabel from "../clockSales/salesLabel.js";
 
 export default function confirmBtn() {
   document.getElementById("confirmBtn").onclick = function () {
@@ -80,13 +80,7 @@ export default function confirmBtn() {
             inpytVal();
             addToBranch(`btnBranch${responseObj.get(String(i + 1)).id}`);
             if (responseObj.get(String(i + 1)).sales != "No") {
-              document.getElementById(
-                `divSale${i + 1}`
-              ).innerHTML += `<h3>Sales!</h3><div></div>`;
-              initializeClock(
-                document.getElementById(`divSale${i + 1}`),
-                responseObj.get(String(i + 1)).sales
-              );
+              salesLabel(responseObj.get(String(i + 1)), i + 1);
             }
           }
         }

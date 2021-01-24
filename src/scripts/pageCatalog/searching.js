@@ -1,7 +1,7 @@
-import initializeClock from "../clockSales/clocker.js";
 import inpytVal from "../loadPages/inputsValidity";
 import addToBranch from "./addToBranch";
 import getRequest from "../server/getRequest.js";
+import salesLabel from "../clockSales/salesLabel";
 
 export default function searching() {
   if (
@@ -41,13 +41,7 @@ export default function searching() {
                   </div>`;
           addToBranch(`btnBranch${value.id}`);
           if (value.sales != "No") {
-            document.getElementById(
-              `divSale${value.id}`
-            ).innerHTML += `<h3>Sales!</h3><div></div>`;
-            initializeClock(
-              document.getElementById(`divSale${value.id}`),
-              value.sales
-            );
+            salesLabel(value, value.id);
           }
         }
       }

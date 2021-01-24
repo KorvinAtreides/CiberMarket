@@ -1,6 +1,6 @@
-import initializeClock from "../clockSales/clocker.js";
 import addToBranch from "./addToBranch";
 import getRequest from "../server/getRequest.js";
+import salesLabel from "../clockSales/salesLabel.js";
 
 export default function catalog() {
   let request = getRequest("goods");
@@ -37,13 +37,7 @@ export default function catalog() {
             </div>`;
       addToBranch(`btnBranch${responseObj.get(String(i + 1)).id}`);
       if (responseObj.get(String(i + 1)).sales != "No") {
-        document.getElementById(
-          `divSale${i + 1}`
-        ).innerHTML += `<h3>Sales!</h3><div></div>`;
-        initializeClock(
-          document.getElementById(`divSale${i + 1}`),
-          responseObj.get(String(i + 1)).sales
-        );
+        salesLabel(responseObj.get(String(i + 1)), i + 1);
       }
     }
   } else if (request.status == 404) {

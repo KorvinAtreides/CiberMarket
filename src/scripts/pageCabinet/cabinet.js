@@ -1,7 +1,7 @@
-import initializeClock from "../clockSales/clocker.js";
 import sum from "./sum";
 import removeFromBranch from "../pageBranch/removeFromBranch";
 import getRequest from "../server/getRequest.js";
+import salesLabel from "../clockSales/salesLabel.js";
 
 export default function cabinet() {
   let request = getRequest("goods");
@@ -35,13 +35,7 @@ export default function cabinet() {
         removeFromBranch(`btnBranch${responseObj.get(String(id)).id}`);
         sum();
         if (responseObj.get(String(id)).sales != "No") {
-          document.getElementById(
-            `divSale${id}`
-          ).innerHTML += `<h3>Sales!</h3><div></div>`;
-          initializeClock(
-            document.getElementById(`divSale${id}`),
-            responseObj.get(String(id)).sales
-          );
+          salesLabel(responseObj.get(String(id)), id);
         }
       }
     }

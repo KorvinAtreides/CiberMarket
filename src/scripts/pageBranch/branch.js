@@ -1,8 +1,8 @@
-import initializeClock from "../clockSales/clocker.js";
 import inputsValidity from "../loadPages/inputsValidity";
 import updateBranch from "./updateBranch";
 import removeFromBranch from "./removeFromBranch";
 import getRequest from "../server/getRequest.js";
+import salesLabel from "../clockSales/salesLabel";
 
 export default function branch() {
   let request = getRequest("goods");
@@ -38,13 +38,7 @@ export default function branch() {
         inputsValidity();
         removeFromBranch(`btnBranch${responseObj.get(String(id)).id}`); //кнопка удаления из корзины
         if (responseObj.get(String(id)).sales != "No") {
-          document.getElementById(
-            `divSale${id}`
-          ).innerHTML += `<h3>Sales!</h3><div></div>`;
-          initializeClock(
-            document.getElementById(`divSale${id}`),
-            responseObj.get(String(id)).sales
-          );
+          salesLabel(responseObj.get(String(id)), id);
         }
       } //распродажа
       updateBranch();

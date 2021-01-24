@@ -1,8 +1,8 @@
-import initializeClock from "../clockSales/clocker.js";
 import stars from "./stars.js";
 import addBranch from "./addBranch";
 import clickArrow from "./clickArrow";
 import getRequest from "../server/getRequest.js";
+import salesLabel from "../clockSales/salesLabel.js";
 
 export default function pageProduct() {
   let request = getRequest("goods");
@@ -41,16 +41,9 @@ export default function pageProduct() {
             </div>`;
         clickArrow(value.number);
         stars();
-        addBranch(`btnBranch${value.id}`, value.number); //кнопка добавки в корзину
+        addBranch(`btnBranch${value.id}`, value.number);
         if (value.sales != "No") {
-          //проверка статуса распродажи
-          document.getElementById(
-            `divSale${value.id}`
-          ).innerHTML += `<h3>Sales!</h3><div></div>`;
-          initializeClock(
-            document.getElementById(`divSale${value.id}`),
-            value.sales
-          );
+          salesLabel(value, value.id);
         }
       }
     }
