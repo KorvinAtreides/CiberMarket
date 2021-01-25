@@ -10,7 +10,7 @@ export default function updateBranch() {
       );
       let number = arrow.parentElement.children[1].value;
       let mapGoods = new Map(JSON.parse(localStorage.getItem("goodsInBranch")));
-      mapGoods.delete(String(id)); //перезапись элементов в корзине
+      mapGoods.delete(String(id));
       mapGoods.set(String(id), Number(number));
       localStorage.setItem("goodsInBranch", JSON.stringify([...mapGoods]));
       branchLabel();

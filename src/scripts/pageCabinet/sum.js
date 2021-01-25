@@ -11,16 +11,15 @@ export default function sum() {
       mapGoods = new Map(JSON.parse(localStorage.getItem("goodsInBranch")));
       for (let [key, value] of mapGoods) {
         let id = String(key).slice(9);
-        numberItems += value; //считаем количество элементов
-        sum += value * responseObj.get(id).price; //и их сумму
+        numberItems += value;
+        sum += value * responseObj.get(id).price;
       }
       document.getElementById(
         "sum"
       ).innerHTML = `There are ${numberItems} items in your branch on sum of ${
         Math.round(sum * 100) / 100
       }$`;
-    } //если ничего нет
-    else {
+    } else {
       document.getElementById(
         "sum"
       ).innerHTML = `There are 0 items in your branch on sum of 0$`;

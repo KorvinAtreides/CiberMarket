@@ -1,15 +1,15 @@
 export default function branchLabel() {
   if (document.getElementById("numberItems") !== null) {
-    let numberItems = 0;
+    let itemsValue = 0;
     let mapGoods;
     if (localStorage.getItem("goodsInBranch") != undefined) {
       mapGoods = new Map(JSON.parse(localStorage.getItem("goodsInBranch")));
       for (let [key, value] of mapGoods) {
-        numberItems += value;
+        itemsValue += value;
       }
-      document.getElementById("numberItems").value = numberItems;
+      numberItems.value = itemsValue;
     } else {
-      document.getElementById("numberItems").value = 0;
+      numberItems.value = 0;
     }
   }
 }

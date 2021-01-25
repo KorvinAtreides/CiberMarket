@@ -11,12 +11,12 @@ export default function clickArrowOnCatalog() {
       if (arrow.classList.contains("arrLeft")) {
         let val = arrow.nextElementSibling.value;
         val--;
-        arrow.nextElementSibling.value = String(val); // уменьшают значение на 1
+        arrow.nextElementSibling.value = String(val);
         if (Number(arrow.nextElementSibling.value) <= 0) {
-          arrow.nextElementSibling.value = "1"; //но не менбше 0
+          arrow.nextElementSibling.value = "1";
         }
       } else {
-        let val = arrow.previousElementSibling.value; //увеличивают на 1
+        let val = arrow.previousElementSibling.value;
         val++;
         arrow.previousElementSibling.value = String(val);
       }

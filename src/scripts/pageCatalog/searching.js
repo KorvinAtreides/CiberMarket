@@ -19,7 +19,6 @@ export default function searching() {
       ul.innerHTML = ``;
       localStorage.removeItem("searchItem");
       for (let [key, value] of responseObj) {
-        //если есть совпадение - отрисовка
         if (value.name.indexOf(String(search)) != -1) {
           let li = document.createElement("li");
           ul.appendChild(li);
@@ -46,15 +45,13 @@ export default function searching() {
         }
       }
       if (ul.innerHTML == "") {
-        //если ничего не найдено
         ul.innerHTML = `<div>
                   <h3>Sorry, we couldn't found anything</h3>
                   <h3>Please, make another try</h3>
               </div>`;
       } else {
-        //если есть что-то то вызываются листенеры на стрелочки
         inpytVal();
-      } //и проверка на валидность
+      }
     } else if (request.status == 404) {
       console.log("Ресурс не найден");
     } else {

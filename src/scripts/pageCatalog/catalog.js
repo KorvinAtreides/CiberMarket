@@ -7,8 +7,8 @@ export default function catalog() {
   if (request.status == 200) {
     let responseObj = new Map(JSON.parse(request.object));
     for (let i = 0; i < responseObj.size; i += 4) {
-      //загрузка каталога
-      let li = document.createElement("li"); //со случайно выбранными элементами
+      //loading catalog with random elements (if not searching)
+      let li = document.createElement("li");
       let ul = document.getElementById("catalog");
       ul.appendChild(li);
       li.innerHTML = `<img src="${responseObj.get(String(i + 1)).src}.png"</img>

@@ -5,7 +5,7 @@ export default function checkbox() {
       let checks = document.getElementsByClassName("checkCategory");
       if (AllCategory.checked) {
         for (let check of checks) {
-          //проверка для главного чек-бокса
+          //main checkbox
           check.checked = true;
           check.setAttribute("disabled", "disabled");
         }
@@ -17,7 +17,7 @@ export default function checkbox() {
       checks = document.getElementsByClassName("defence");
       if (defence.checked) {
         for (let check of checks) {
-          //проверка для категории дефенс
+          //defence checkbox
           check.checked = true;
           check.setAttribute("disabled", "disabled");
         }
@@ -29,7 +29,7 @@ export default function checkbox() {
       checks = document.getElementsByClassName("Augmentations");
       if (body.checked) {
         for (let check of checks) {
-          //проверка для категории Augmentations
+          // Augmentations checkbox
           check.checked = true;
           check.setAttribute("disabled", "disabled");
         }
@@ -41,7 +41,7 @@ export default function checkbox() {
       checks = document.getElementsByClassName("checkCountry");
       if (Allcountry.checked) {
         for (let check of checks) {
-          //проверка для категории стран
+          //country checkbox
           check.checked = true;
           check.setAttribute("disabled", "disabled");
         }

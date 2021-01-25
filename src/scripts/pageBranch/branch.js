@@ -13,10 +13,9 @@ export default function branch() {
     if (localStorage.getItem("goodsInBranch") != undefined) {
       mapGoods = new Map(JSON.parse(localStorage.getItem("goodsInBranch")));
       for (let [key, value] of mapGoods) {
-        //сопосталение количества и айди элементов в localStorage
-        let id = String(key).slice(9); //и информации на сервере
+        let id = String(key).slice(9);
         let li = document.createElement("li");
-        ul.appendChild(li); //отрисовка
+        ul.appendChild(li);
         li.innerHTML = `<img src="${responseObj.get(id).src}.png"</img>
                 <div>
                     <h3>${responseObj.get(String(id)).name}</h3>
@@ -40,14 +39,14 @@ export default function branch() {
         if (responseObj.get(String(id)).sales != "No") {
           salesLabel(responseObj.get(String(id)), id);
         }
-      } //распродажа
+      }
       updateBranch();
     }
     if (ul.innerHTML == "") {
       ul.innerHTML = `<div>
                 <h3>Sorry, the branch is empty</h3>
                 <h3>Please, add something in it</h3>
-            </div>`; //если ничего нет
+            </div>`;
     }
   } else if (request.status == 404) {
     console.log("Ресурс не найден");

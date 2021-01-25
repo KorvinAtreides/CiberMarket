@@ -17,7 +17,7 @@ export default function signUp() {
           if (responseObj[j].user.name == login) {
             i++;
           }
-        } // если нашёл юзера с таким же логином - алерт
+        }
         if (i != 0) {
           alert("there is an account with this login");
         } else {
@@ -27,7 +27,7 @@ export default function signUp() {
           postRequest("users", JSON.stringify(data[0]));
           alert(`thanks for registration, ${login}`);
           let currentUser = login;
-          localStorage.setItem("currentUser", currentUser); //запоминаем, кто в сети
+          localStorage.setItem("currentUser", currentUser);
           document.location.href = "./index.html";
         }
       } else if (request.status == 404) {

@@ -19,7 +19,7 @@ export default function confirmBtn() {
       if (check.checked == true) {
         k++;
       }
-    } //проверка на валидность
+    } //check validity
     let priceMina = +document.getElementById("PriceSel").children[0].value;
     let priceMaxa = +document.getElementById("PriceSel").children[1].value;
     if (l == 0 || k == 0) {
@@ -39,15 +39,15 @@ export default function confirmBtn() {
           let priceMax = +document.getElementById("PriceSel").children[1].value;
           let country = responseObj.get(String(i + 1)).country;
           if (
-            document.getElementById(String(category)).checked == true && //проверка на категорию
-            Number(responseObj.get(String(i + 1)).price) <= priceMax && //и на ценоввой фильтр
-            Number(responseObj.get(String(i + 1)).price) >= priceMin && //и на страны
-            document.getElementById(String(country)).checked == true && //включён фильтр распродаж и элемент на распродаже
+            document.getElementById(String(category)).checked == true && //check category
+            Number(responseObj.get(String(i + 1)).price) <= priceMax && //price filter
+            Number(responseObj.get(String(i + 1)).price) >= priceMin && //country filter
+            document.getElementById(String(country)).checked == true && //sales filter on and el on sales
             ((responseObj.get(String(i + 1)).sales != "No" &&
               document.getElementById("Sales").checked == true) ||
               document.getElementById("Sales").checked == false)
           ) {
-            //или фильтр выключен
+            //or sales filter off
             ul.appendChild(li);
             li.innerHTML = `<img src="${
               responseObj.get(String(i + 1)).src

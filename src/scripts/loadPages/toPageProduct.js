@@ -1,11 +1,10 @@
 import getRequest from "../server/getRequest";
 
 export default function toPageProduct() {
-  let images = document.querySelectorAll("img"); // для всех картинок кроме лого
+  let images = document.querySelectorAll("img");
   for (let image of images) {
     if (image.alt != "logo") {
       image.onclick = function () {
-        //кликер перехода и считывание имени картинки
         let name = String(image.src).slice(
           String(image.src).lastIndexOf("/") + 1,
           -4
@@ -16,7 +15,7 @@ export default function toPageProduct() {
           for (let [key, value] of responseObj) {
             if (value.name == name) {
               localStorage.removeItem("currentItem");
-              localStorage.setItem("currentItem", name); //запоминаем выбранный объект
+              localStorage.setItem("currentItem", name);
               document.location.href = "./pageProduct.html";
             }
           }

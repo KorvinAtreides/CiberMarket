@@ -7,7 +7,7 @@ export default function sendComment() {
         name = localStorage.getItem("currentUser");
       } else {
         name = "Visitor";
-      } // для анонимов не сети
+      } // for not authorized guests
       document.getElementById("areacomments").innerHTML += `
                   <div id="comments">
                       <div id="who">${name}:</div>

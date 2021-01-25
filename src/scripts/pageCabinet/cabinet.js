@@ -12,9 +12,8 @@ export default function cabinet() {
     if (localStorage.getItem("goodsInBranch") != undefined) {
       mapGoods = new Map(JSON.parse(localStorage.getItem("goodsInBranch")));
       for (let [key, value] of mapGoods) {
-        //сопосталение количества и айди элементов в localStorage
-        let id = String(key).slice(9); //и информации на сервере
-        let li = document.createElement("li"); //отрисовка
+        let id = String(key).slice(9);
+        let li = document.createElement("li");
         ul.appendChild(li);
         li.innerHTML = `<img src="${responseObj.get(id).src}.png"</img>
                 <div>

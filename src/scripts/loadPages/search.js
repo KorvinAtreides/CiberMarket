@@ -7,7 +7,7 @@ export default function search() {
           searchBtn.previousElementSibling.value
         );
         document.location.href = "./productCatalog.html";
-      } // если будет сущ searchItem, то при загрузке каталога будет уже сам поиск работать
+      } // if searchItem exists, searching starts in catalog page
     });
     document
       .getElementById("search")

@@ -11,7 +11,6 @@ export default function pageProduct() {
     let responseObj = new Map(JSON.parse(request.object));
     for (let [key, value] of responseObj) {
       if (value.name == name) {
-        //вся инфа по найденному элементу
         document.getElementById("flexProd").innerHTML = `
             <div class="image">
                 <img src="${value.src}.png"></img>
