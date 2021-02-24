@@ -21,19 +21,21 @@ h3 {
 .arrow svg {
   padding: 5px;
 }
-.btn :hover,
-.arrow :hover,
-.socialMedia :hover {
+.btn:hover,
+.arrow:hover,
+.socialMedia:hover {
+  cursor: pointer;
   background-color: #10033357;
 }
-.btn :active,
-.arrow :active,
-.socialMedia :active {
+.btn:active,
+.arrow:active,
+.socialMedia:active {
   background-color: #ff000057;
 }
 .spanCircle svg:hover {
+  cursor: pointer;
   color: #10033357;
 }
-.spanCircle svg :active {
+.spanCircle svg:active {
   color: #ff000057;
 }
