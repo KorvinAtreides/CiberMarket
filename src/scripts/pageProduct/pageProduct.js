@@ -32,9 +32,7 @@ export default function pageProduct() {
                     <span class="star"><i class="far fa-star"></i></span>
                     <span class="star"><i class="far fa-star"></i></span>
                 </div>
-                <div class="btn" id="btnBranch${value.id}">
-                  Add into Branch
-                </div>
+                <div class="btn" id="btnBranch${value.id}">Add into Branch</div>
                 <div class="divSale" id="divSale${value.id}">
                 </div>
             </div>`;

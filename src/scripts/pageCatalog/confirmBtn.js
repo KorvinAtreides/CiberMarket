@@ -71,9 +71,7 @@ export default function confirmBtn() {
                               }</h3>
                               <div class="btn" id="btnBranch${
                                 responseObj.get(String(i + 1)).id
-                              }">
-                              Add into Branch
-                              </div>
+                              }">Add into Branch</div>
                               <div class="divSale" id="divSale${i + 1}">
                               </div>
                           </div>`;

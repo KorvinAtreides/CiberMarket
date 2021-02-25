@@ -28,9 +28,7 @@ export default function branch() {
                     <h3>Made in ${responseObj.get(String(id)).country}</h3>
                     <div class="btn" id="btnBranch${
                       responseObj.get(String(id)).id
-                    }">
-                    Remove from Branch
-                    </div>
+                    }">Remove from Branch</div>
                     <div class="divSale" id="divSale${id}">
                     </div>
                 </div>`;
