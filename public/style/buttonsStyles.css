@@ -7,6 +7,12 @@ h3 {
 .btn {
   background-color: #1d033379;
   margin: 5px 10px;
+  font-size: 24px;
+  color: #000014;
+  text-align: center;
+}
+.btn:nth-child(n) {
+  padding: 5px 10px 5px 10px;
 }
 .arrow {
   margin: 0px 10px;

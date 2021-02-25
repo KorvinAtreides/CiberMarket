@@ -30,7 +30,7 @@ export default function catalog() {
                 <div class="btn" id="btnBranch${
                   responseObj.get(String(i + 1)).id
                 }">
-                <h3>Add into Branch</h3>
+                Add into Branch
                 </div>
                 <div class="divSale" id="divSale${i + 1}">
                 </div>

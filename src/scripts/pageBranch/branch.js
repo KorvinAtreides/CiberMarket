@@ -29,7 +29,7 @@ export default function branch() {
                     <div class="btn" id="btnBranch${
                       responseObj.get(String(id)).id
                     }">
-                    <h3>Remove from Branch</h3>
+                    Remove from Branch
                     </div>
                     <div class="divSale" id="divSale${id}">
                     </div>
