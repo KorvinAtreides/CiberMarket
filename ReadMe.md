@@ -25,3 +25,11 @@ The resources of database is acceptable on http://localhost:3000/.
 http://localhost:3000/users
 
 http://localhost:3000/goods
+
+Road-Map:
+md-styling
+img cursor: pointer
+sign of KorvinAtreides in footer
+restyling footer
+restyling branch page/personal cabinet page
+add card pay
