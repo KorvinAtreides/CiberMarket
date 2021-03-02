@@ -2,6 +2,7 @@
 @import url("./header.css");
 @import url("./footer.css");
 @import url("./buttonsStyles.css");
+@import url("./imageStyles.css");
 
 .liBranch {
   margin-left: 2.5%;
@@ -22,9 +23,6 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-}
-.liBranch #branchUl li img {
-  max-width: 100%;
 }
 .liBranch #branchUl li .counter {
   margin: 5px 0px;

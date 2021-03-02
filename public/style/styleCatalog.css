@@ -1,6 +1,7 @@
 @import url("./pre-styles.css");
 @import url("./header.css");
 @import url("./buttonsStyles.css");
+@import url("./imageStyles.css");
 
 .flexCatalog {
   display: flex;
@@ -75,9 +76,6 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-}
-.flexCatalog .liCatalog #catalog li img {
-  max-width: 100%;
 }
 .flexCatalog .liCatalog #catalog li .counter {
   margin: 5px 0px;

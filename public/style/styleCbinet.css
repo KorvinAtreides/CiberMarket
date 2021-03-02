@@ -1,6 +1,7 @@
 @import url("./pre-styles.css");
 @import url("./header.css");
 @import url("./buttonsStyles.css");
+@import url("./imageStyles.css");
 
 .flexCatalog {
   display: flex;
@@ -39,9 +40,6 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-}
-.flexCatalog .liCatalog #branchUl li img {
-  max-width: 100%;
 }
 .flexCatalog .liCatalog #branchUl li input {
   width: 40px;

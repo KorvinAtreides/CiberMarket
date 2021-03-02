@@ -2,6 +2,7 @@
 @import url("./header.css");
 @import url("./footer.css");
 @import url("./buttonsStyles.css");
+@import url("./imageStyles.css");
 
 .flexProd {
   padding: 30px 0px;
@@ -14,9 +15,6 @@
 }
 .flexProd .image {
   width: 30%;
-}
-.flexProd .image img {
-  max-width: 100%;
 }
 .flexProd .content {
   width: 60%;

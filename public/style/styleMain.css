@@ -2,6 +2,7 @@
 @import url("./header.css");
 @import url("./footer.css");
 @import url("./buttonsStyles.css");
+@import url("./imageStyles.css");
 
 .container1 {
   display: flex;
@@ -22,7 +23,6 @@
 }
 .container1 .caryselDiv img {
   position: relative;
-  max-width: 100%;
   height: 300px;
   z-index: 2;
 }
@@ -98,9 +98,6 @@
 }
 .container2 #caryselDiv2 li {
   width: 22%;
-}
-.container2 #caryselDiv2 img {
-  width: 100%;
 }
 .container2 #caryselDiv2 .arrow {
   margin: 0px;
