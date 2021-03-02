@@ -25,10 +25,12 @@ The resources of database is acceptable on http://localhost:3000/.
 
 Road-Map:
 
-- img cursor: pointer
+- refactor styles
 - sign of KorvinAtreides in footer
 - restyling footer
 - restyling branch page/personal cabinet page
+- add mobile mode
+- check other brousers
 - add card pay
 - change db: normal names, add tags
 - change searching with tags
